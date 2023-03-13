@@ -71,7 +71,7 @@ const Login: React.FC<Props> = () => {
                 }, 1000)
             }
             else {
-                console.log('res',res)
+                console.log('res', res)
                 CookiesHandler.setAccessToken(res.access_token)
                 if (res.slug) {
                     CookiesHandler.setSlug(res.slug as string)
@@ -108,14 +108,14 @@ const Login: React.FC<Props> = () => {
             </picture>
             <p> Login With Google</p>
         </button>
-        <button className={styles['button']}
+        {/* <button className={styles['button']}
             onClick={handleFacebookLogin}
         >
             <picture>
                 <img src='images/facebook.svg' alt="facebook"></img>
             </picture>
             <p> Login With Facebook</p>
-        </button>
+        </button> */}
 
         <Grid className={styles['privacy']}>
             <p>By logging in, you agree to our terms <br /> and conditons and <span>Privacy Policy</span></p>

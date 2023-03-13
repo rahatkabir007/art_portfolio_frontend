@@ -1,0 +1,38 @@
+.welcomeMessage {
+    margin-top: 2rem;
+    padding: 3rem;
+    height: 40vh;
+}
+
+.welcomeMessage p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.welcomeMessage p:nth-child(1) {
+    font-family: 'Bebas Neue';
+    font-size: 4.5rem;
+}
+
+.welcomeMessage p:nth-child(2) {
+    font-family: 'Poppins';
+    font-size: 2rem;
+}
+
+/* .image {
+    width: 50%;
+    margin: 7rem auto 20px auto;
+    text-align: center;
+}
+
+.image img {
+    width: 136px;
+    height: 136px;
+} */
+
+@media only screen and (max-width:688px) {
+    .welcomeMessage {
+        padding: 2rem;
+        height: 63vh;
+    }
+}

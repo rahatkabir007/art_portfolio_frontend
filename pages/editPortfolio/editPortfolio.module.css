@@ -1,0 +1,318 @@
+.container {
+    width: 98%;
+    /* margin: 0 auto; */
+    margin: 25px auto 0px;
+}
+
+.MuiInput-input::after {
+    display: none !important;
+}
+
+
+.description label,
+.year #year,
+.privacy label,
+.coverImageContainer label,
+.picturesContainer label {
+    font-family: 'Bebas Neue';
+    letter-spacing: 1px;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+}
+
+.description textarea {
+    font-family: 'Poppins';
+    background-color: rgb(243, 243, 243);
+    border: 1px solid #ebebeb !important;
+    border-radius: 5px;
+    font-size: 18px !important;
+    outline: none !important;
+    padding: 6px 10px !important;
+    resize: none;
+}
+
+.yearContainer {
+    margin-top: 1.5rem;
+}
+
+.year {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkboxContainer {
+    display: flex;
+    align-items: center;
+}
+
+.checkboxContainer input {
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+
+.checkboxContainer #none {
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.yearInput {
+    width: 100%;
+    margin: 1rem auto 2rem auto;
+    text-align: center;
+}
+
+.yearNumbers {
+    min-width: 100px;
+    padding: 0 1rem 0 1rem;
+    border: none !important;
+}
+
+.yearNumbers p {
+    margin: 0;
+    font-family: 'Poppins';
+    padding: 0;
+    cursor: pointer;
+}
+
+.selectedButton {
+    color: black;
+    font-size: 20.5px !important;
+    font-weight: 500;
+}
+
+.notSelectedButton {
+    font-size: 20px !important;
+    color: grey;
+}
+
+.disabledBtn {
+    font-size: 20px !important;
+    color: grey;
+}
+
+.privacyOptions {
+    /* width: 50%;
+    margin: 1rem auto; */
+    margin: 4px 0;
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.privacyOptions span {
+    font-family: 'Poppins';
+    font-size: 17px;
+}
+
+.coverImagesInput {
+    width: 50%;
+    margin: 1rem auto 1.2rem auto;
+    text-align: center;
+}
+
+.coverImagesNumber {
+    min-width: 40px;
+    padding: 0 1rem 0 1rem;
+    border: none !important;
+}
+
+
+
+.coverImagesNumber p {
+    margin: 0;
+    font-family: 'Poppins';
+    font-size: 15px;
+    padding: 0;
+}
+
+.coverImageContainer {
+    margin-top: 1rem;
+}
+
+.coverImageContainer p {
+    text-align: center;
+    font-family: 'Poppins';
+    font-weight: 400;
+}
+
+.favIcon {
+    position: absolute;
+    top: 90%;
+    left: 48%;
+}
+
+.favIconDone {
+    position: absolute;
+    top: 3%;
+    left: 88%;
+    color: white;
+    z-index: 1;
+}
+
+.error {
+    color: red !important;
+    margin-top: 0.3rem;
+    font-family: 'Poppins';
+    font-size: 0.8rem;
+}
+
+@media only screen and (max-width:688px) {
+    .container {
+        width: 95%;
+        /* margin: 0 auto; */
+        margin: 25px auto 0px;
+    }
+
+    .MuiInput-input::after {
+        display: none !important;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .description textarea {
+        font-family: 'Poppins';
+        background-color: rgb(243, 243, 243);
+        border: 1px solid #ebebeb !important;
+        border-radius: 5px;
+        font-size: 18px !important;
+        outline: none !important;
+        padding: 6px 10px !important;
+    }
+
+    .yearContainer {
+        margin-top: 1.5rem;
+    }
+
+    .year {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    .checkboxContainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .checkboxContainer input {
+        width: 15px;
+        height: 15px;
+        margin-right: 6px;
+    }
+
+    .checkboxContainer #none {
+        font-family: 'Poppins';
+        font-size: 15px;
+    }
+
+    .yearInput {
+        width: 100%;
+        margin: 1rem auto 2rem auto;
+        text-align: center;
+    }
+
+    .yearNumbers {
+        min-width: 100px;
+        padding: 0 1rem 0 1rem;
+    }
+
+    .yearNumbers button {
+        background: none;
+        border: none;
+        font-family: 'Poppins';
+        padding: 0;
+    }
+
+    .selectedButton {
+        color: black;
+        font-size: 18.5px !important;
+        font-weight: 500;
+    }
+
+    .notSelectedButton {
+        font-size: 18px !important;
+        color: grey;
+    }
+
+    .disabledBtn {
+        font-size: 18px !important;
+    }
+
+    .coverImageContainer {
+        margin-top: 1rem;
+    }
+
+    .coverImagesInput {
+        width: 50%;
+        margin: 1rem auto 1.2rem auto;
+        text-align: center;
+    }
+
+    .coverImagesNumber {
+        min-width: 40px;
+        padding: 0 1rem 0 1rem;
+    }
+
+    .coverImagesNumber button {
+        background: none;
+        border: none;
+        font-family: 'Poppins';
+        font-size: 15px;
+        padding: 0;
+    }
+
+
+
+    .coverImageContainer p {
+        text-align: center;
+        font-family: 'Poppins';
+        font-weight: 400;
+    }
+
+    .description label,
+    .year #year,
+    .coverImageContainer label,
+    .privacy label,
+    .picturesContainer label {
+        font-family: 'Bebas Neue';
+        letter-spacing: 0.5px;
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+    .favIcon {
+        position: absolute;
+        top: 90%;
+        left: 42%;
+    }
+
+    .favIconDone {
+        position: absolute;
+        top: 3%;
+        left: 88%;
+        color: white;
+        z-index: 1;
+    }
+
+    .error {
+        color: red !important;
+        margin-top: 0.3rem;
+        font-family: 'Poppins';
+        font-size: 0.8rem;
+    }
+
+}

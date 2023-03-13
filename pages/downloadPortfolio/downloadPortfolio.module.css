@@ -1,0 +1,481 @@
+.title {
+    margin: auto;
+    font-family: 'Bebas Neue';
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    font-size: 28px !important;
+}
+
+.imageText {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Bebas Neue', 'cursive' !important;
+    text-transform: uppercase;
+    margin: 0px 0px 15px 0px;
+    text-align: left;
+    word-wrap: break-word
+}
+
+.scrollDiv {
+
+    margin-top: 35px;
+    text-align: center;
+    height: 77.80vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.drawerTitle {
+    font-size: 30px;
+    font-family: Bebas Neue;
+    font-weight: 500;
+    margin: 0px 15px;
+    cursor: pointer
+}
+
+.drawerTitle ::after {
+    background: white;
+    content: "";
+    display: block;
+    height: 2px;
+    margin-top: 15px;
+    width: 50px;
+}
+
+
+.scrollDiv::-webkit-scrollbar {
+    display: hidden;
+    width: 0;
+}
+
+.centerCoverImagePortfolioName {
+    position: absolute;
+    font-size: 70px;
+    font-weight: 500;
+    top: 50%;
+    left: 50%;
+    margin-top: 60px;
+    transform: translate(-50%, -65%);
+    text-align: left;
+}
+
+.centerCoverImageOwnerName {
+    position: absolute;
+    font-size: 70px;
+    font-weight: 500;
+    top: 54%;
+    left: 50%;
+    margin-top: 60px;
+    word-break: break-word;
+    transform: translate(-50%, -40%);
+    text-align: left;
+}
+
+
+.leftCoverImagePortfolioName {
+    position: absolute;
+    font-size: 70px;
+    font-weight: 500;
+    top: 50%;
+    left: 3vw;
+    text-align: left;
+    /* margin-top: 25px; */
+
+
+}
+
+.leftCoverImageOwnerName {
+    position: absolute;
+    font-size: 70px;
+    font-weight: 500;
+    top: 60%;
+    left: 3vw;
+    text-align: left;
+}
+
+.rightCoverImagePortfolioName {
+    position: absolute;
+    font-size: 70px;
+    font-weight: 500;
+    top: 50%;
+    right: 3vw;
+    text-align: left;
+}
+
+.rightCoverImageOwnerName {
+    position: absolute;
+    font-size: 70px;
+    font-weight: 500;
+    top: 60%;
+    right: 3vw;
+    text-align: left;
+}
+
+.portfolioName {
+    font-size: 70px;
+    text-align: left;
+    margin-left: 0px;
+    font-weight: 500;
+    height: 70px;
+    font-family: Bebas Neue;
+}
+
+.image {
+    height: 700px;
+    width: 100%;
+    margin-top: 70px;
+    opacity: .5;
+}
+
+.imageHide {
+    height: 700px;
+    width: 100%;
+    visibility: hidden;
+    margin-top: 70px;
+}
+
+
+
+.ownerName {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+
+}
+
+.pictureNumber {
+    color: rgb(151, 152, 153);
+    font-size: 18px;
+    font-family: Poppins;
+    text-align: left;
+    word-break: break-word;
+    /* margin-top: -15px; */
+    margin-bottom: 20px
+}
+
+.portfolioDescription {
+    font-family: Poppins;
+    margin-bottom: 20px;
+    text-align: left
+}
+
+.namePicture {
+    font-size: 20px;
+    font-family: Poppins;
+    text-align: left;
+    font-weight: 500;
+}
+
+.descPicture {
+    font-size: 20px;
+    font-family: Poppins;
+    text-align: left;
+}
+
+.iconText {
+    margin: 0;
+    line-height: 1.2;
+    width: 93px;
+}
+
+.scroll {
+    padding-top: 40px;
+}
+
+
+.twoOriginalSize {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1vw;
+
+}
+
+.twoSquareSize {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1vw;
+    padding-bottom: 10px;
+}
+
+.threeSquareSize {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1vw;
+}
+
+.image1 {
+    width: 100%;
+    margin-top: 2vw;
+    display: block;
+}
+
+.twoOriginalSize .image1 {
+    margin: 0px;
+    display: block;
+}
+
+.twoSquareSize .image1 {
+    height: 44vw;
+    width: 44vw;
+    margin: 0px;
+    display: block;
+}
+
+.threeSquareSize .image1 {
+    margin: 0px;
+    height: 29.5vw;
+    width: 29.5vw;
+    display: block;
+}
+
+.iconTextWidth {
+    margin: 0;
+    line-height: 1.2;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    /* color: white */
+}
+
+.displayDrawer {
+    position: fixed;
+    bottom: -140px;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-Radius: 20px;
+}
+
+.drawerFullContainerOpen {
+    position: fixed;
+    bottom: -140px;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-Radius: 20px;
+    animation: createBox .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes createBox {
+    from {
+        bottom: -140px;
+    }
+
+    to {
+        bottom: 0px;
+    }
+}
+
+.showAnim {
+    max-height: 20000px;
+    opacity: 1;
+    transition: max-height 2s ease, opacity 1s ease;
+}
+
+.hiddenAnim {
+    max-height: 0px;
+    opacity: 0;
+    transition: max-height .5s ease, opacity .8s ease;
+
+}
+
+.drawerFullContainerClose {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-Radius: 20px;
+    animation: createB .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes createB {
+    0% {
+        bottom: 0px;
+    }
+
+    100% {
+        bottom: -140px;
+    }
+}
+
+
+.drawerDivParent {
+    display: flex;
+    color: white;
+    overflow-x: auto;
+    width: 100vw
+}
+
+.drawerDivParent::-webkit-scrollbar {
+    width: 0;
+    height: 0
+}
+
+.drawerDiv {
+    height: 120px;
+    /* background-color: #f74c4c; */
+    margin: 25px 7px 15px 7px;
+    min-width: 93px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    text-align: center;
+    padding: 0 0.5vw;
+    cursor: pointer;
+}
+
+.drawerDivHide {
+    display: none;
+}
+
+.drawer p {
+    display: inline-block;
+    position: relative;
+
+}
+
+.drawer p::after {
+    content: "";
+    height: 5px;
+    width: 25%;
+    border-radius: 20%;
+    background-color: white;
+    color: white;
+    position: absolute;
+    bottom: -.2em;
+    left: 50%;
+    transform: translate(-75%);
+}
+
+
+.ownerNameHide {
+    font-size: 18px;
+    font-weight: 100;
+    /* visibility: hidden; */
+    display: none;
+}
+
+
+@media only screen and (max-width:688px) {
+    .image {
+        height: 400px;
+        width: 100%;
+        opacity: .5;
+    }
+
+    .imageText {
+        font-weight: bold;
+        font-size: 18px;
+        font-family: Bebas Neue, cursive !important;
+        text-transform: uppercase;
+        margin: 0px 0px 10px 0px;
+        text-align: left;
+        word-wrap: break-word
+    }
+
+    .centerCoverImageOwnerName {
+        top: 49%
+    }
+
+    .imageHide {
+        height: 400px;
+        width: 100%;
+        visibility: hidden;
+    }
+
+    .centerCoverImagePortfolioName {
+        font-size: 45px;
+        margin-top: 39px;
+
+    }
+
+    .leftCoverImagePortfolioName {
+        font-size: 45px;
+        /* margin-top: 3vh; */
+    }
+
+    .rightCoverImagePortfolioName {
+        font-size: 45px;
+        /* margin-top: 25px; */
+    }
+
+    .portfolioName {
+        font-size: 60px;
+        height: 60px;
+    }
+
+    .ownerName {
+        font-size: 15px;
+    }
+
+}
+
+@media only screen and (max-width:400px) {
+    .drawerTitle {
+        font-size: 23px;
+    }
+
+    .title {
+        font-size: 23px !important;
+    }
+}
+
+@media only screen and (max-height:650px) {
+    .scrollDiv {
+        height: 71vh;
+        scroll-behavior: smooth;
+    }
+}
+
+@media only screen and (min-height:651px) and (max-height:730px) {
+    .scrollDiv {
+        height: 74.5vh;
+        scroll-behavior: smooth;
+    }
+
+}
+
+@media only screen and (min-height:731px) and (max-height:800px) {
+    .scrollDiv {
+        height: 77vh;
+        scroll-behavior: smooth;
+    }
+}
+
+@media only screen and (min-height:801px) and (max-height:900px) {
+    .scrollDiv {
+        height: 79.5vh;
+        scroll-behavior: smooth;
+    }
+}
+
+@media only screen and (min-height:901px) and (max-height:1000px) {
+    .scrollDiv {
+        height: 81vh;
+        scroll-behavior: smooth;
+    }
+}
+
+@media only screen and (min-height:1001px) and (max-height:1050px) {
+    .scrollDiv {
+        height: 83vh;
+        scroll-behavior: smooth;
+    }
+}
+
+@media only screen and (min-height:1051px) and (max-height:1200px) {
+    .scrollDiv {
+        height: 84vh;
+        scroll-behavior: smooth;
+    }
+}
+
+@media only screen and (min-height:1351px) and (max-height:1400px) {
+    .scrollDiv {
+        height: 87vh;
+        scroll-behavior: smooth;
+    }
+}

@@ -1,0 +1,122 @@
+.imageContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-top: 5px;
+}
+
+.images {
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    object-fit: cover;
+    display: block;
+    width: 99%;
+    margin: 1px auto;
+    height: 152px;
+
+}
+
+.root {
+    width: 95%;
+    height: 152px;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: darkgray;
+    font-family: 'Poppins';
+}
+
+.contain {
+    width: 80%;
+}
+
+.closeIcon {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.400);
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 25px;
+    position: absolute;
+    bottom: 7rem;
+    right: 0.5rem;
+}
+
+@media only screen and (min-width:768px) {
+    .root {
+        height: 200px;
+    }
+
+    .image {
+        height: 200px;
+    }
+
+    .closeIcon {
+        bottom: 9.5rem;
+        right: 1rem;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .root {
+        height: 230px;
+    }
+
+    .image {
+        height: 230px;
+    }
+
+    .closeIcon {
+        bottom: 11rem;
+        right: 1.5rem;
+    }
+}
+
+@media only screen and (min-width:1440px) {
+    .root {
+        height: 280px;
+    }
+
+    .image {
+        height: 280px;
+    }
+
+    .closeIcon {
+        bottom: 14rem;
+        right: 2rem;
+    }
+}
+
+@media only screen and (max-width:380px) {
+    .root {
+        height: 135px;
+    }
+
+    .image {
+        height: 135px;
+    }
+
+    .closeIcon {
+        bottom: 6rem;
+    }
+
+}
+
+@media only screen and (max-width:280px) {
+    .root {
+        height: 130px;
+    }
+
+    .image {
+        height: 130px;
+    }
+
+    .closeIcon {
+        bottom: 6rem;
+    }
+
+}

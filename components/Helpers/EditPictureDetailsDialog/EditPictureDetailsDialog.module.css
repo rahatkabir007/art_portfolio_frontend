@@ -1,0 +1,94 @@
+.containAll {
+    width: 85%;
+    /* margin: 30px 20px 10px 20px; */
+    margin: 20px auto;
+
+}
+
+.title,
+.title2 {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+
+.description {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.description label,
+.title label,
+.title2 label {
+    font-family: 'Bebas Neue';
+    letter-spacing: 0.5px;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.title2 label {
+    font-size: 24px !important;
+    margin-bottom: 10px;
+}
+
+
+.description textarea {
+    font-family: 'Roboto';
+    /* font-weight: 200; */
+    background-color: rgb(243, 243, 243);
+    border: 1px solid #ebebeb !important;
+    border-radius: 5px;
+    font-size: 18px !important;
+    /* height: 48px !important; */
+    outline: none !important;
+    padding: 16px 0px 16px 0px !important;
+}
+
+.title input,
+.title2 input {
+    font-family: 'Roboto';
+    background-color: rgb(243, 243, 243);
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    font-size: 18px !important;
+    outline: none !important;
+    padding: 4px 0px 5px 0px !important;
+}
+
+.title2 input {
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    font-size: 28px !important;
+    letter-spacing: 0.6px;
+    padding: 10px 0px 5px 0px !important;
+}
+
+.title input:focus,
+.title input:focus {
+    text-decoration: underline;
+}
+
+.title input:focus, .title2 input:focus{
+    text-decoration: underline;
+}
+
+.MuiInput-input::after {
+    display: none !important;
+}
+
+.favIcon {
+    /* position: absolute;
+    top: 77%;
+    left: 42%; */
+    margin: '50px 0px';
+}
+.error {
+    margin-top: 0.3rem;
+    font-family: 'Poppins';
+    font-size: 0.8rem;
+    color: red;
+}

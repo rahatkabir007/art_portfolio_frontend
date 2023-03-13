@@ -1,0 +1,68 @@
+.dialog {
+    margin-top: 80vh;
+}
+
+.allStylesContainer {
+    width: 200px;
+    margin: 2rem auto 1rem;
+}
+
+.originalImagesContainer,
+.squareImagesContainer,
+.staggerdImageContainer {
+    display: flex;
+    align-items: center;
+}
+
+.originalImagesContainer p,
+.squareImagesContainer p,
+.staggerdImageContainer p {
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.numberContainer p {
+    font-family: 'Poppins';
+    font-size: 13px;
+    margin: 0 0 0 1.4rem;
+}
+
+.columnStyleContainer {
+    width: 80%;
+    margin: 10px auto;
+
+}
+
+
+.columnNumbersContainer {
+    width: 100px;
+    margin: 0 auto;
+}
+
+.columnNumbers {
+    min-width: 40px;
+    padding: 0 0 0 3.5px;
+    border: none !important;
+    transform: translateX(0px) !important
+}
+
+.columnNumbers p {
+    margin: 0;
+    font-family: 'Poppins';
+    font-size: 18px;
+    padding: 0;
+}
+
+.splide__list {
+    transform: translateX(0px) !important
+}
+
+@media only screen and (max-width:688px) {
+    .allStylesContainer {
+        width: 200px;
+        margin: 2rem auto 1rem;
+    }
+}

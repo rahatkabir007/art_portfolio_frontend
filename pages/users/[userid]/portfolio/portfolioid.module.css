@@ -1,0 +1,314 @@
+.portfolio_name {
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', 'cursive' !important;
+}
+
+.imageText {
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Bebas Neue', 'cursive' !important;
+    text-transform: uppercase;
+    margin: 0px 0px 15px 0px;
+    padding-left:0.5rem;
+    word-break: break-word
+}
+
+.marg {
+    margin: 0
+}
+
+
+.text {
+    color:#8f8e8e;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Poppins', 'sans-serif' !important;
+    margin-top: -1rem;
+    gap: .25rem;
+    margin-bottom: 10px;
+}
+
+.visibleHide {
+    visibility: hidden;
+    /* opacity: 0; */
+    animation: createVisibility .3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes createVisibility {
+    0% {
+        visibility: visible
+    }
+
+    90% {
+        visibility: visible
+    }
+
+    100% {
+        visibility: hidden
+    }
+}
+
+
+
+
+
+
+.descContainer {
+    padding: 3rem 0rem 0rem 0.5rem;
+    padding-top: 0px;
+    margin-top: 48px;
+}
+
+.images img {
+    background-color: #e3e3e3;
+}
+.images{
+    width:100%
+}
+
+.loadMore {
+    width: 100%;
+    margin-top: 3rem;
+    justify-content: center;
+    display: flex;
+}
+
+
+.loadMore button {
+    width: 100%;
+    outline: 0;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 1rem;
+    padding: 10px 15px;
+    border: 0;
+    color: #fff;
+    font-size: 15px;
+    border: 2px solid transparent;
+    border-color: #000;
+    color: #000;
+    background: transparent;
+    font-weight: 800;
+    line-height: 30px;
+    transition: .1s ease-in-out;
+
+}
+
+.loadMore button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+
+.iconStyle {
+    font-size: '20px';
+    margin-right: '25px';
+    color: 'white';
+}
+
+.displayDrawer {
+    display: none;
+    /* visibility: hidden; */
+}
+
+.animGrow {
+    animation: createBox .5s;
+    position: fixed;
+    animation-fill-mode: forwards;
+    width: 100%;
+    bottom: 84px;
+    margin-top: -324px;
+    z-index: 2;
+}
+
+@keyframes createBox {
+    from {
+        transform: scale(0);
+        transform-origin: bottom center;
+    }
+
+    to {
+        transform: scale(1);
+        transform-origin: bottom center;
+    }
+}
+
+.anim {
+    animation: createB .5s;
+    position: fixed;
+    animation-fill-mode: forwards;
+    width: 100%;
+    bottom: 84px;
+    margin-top: -324px;
+    z-index: 3
+}
+
+@keyframes createB {
+    from {
+        transform: scale(1);
+        transform-origin: bottom center;
+    }
+
+    to {
+        transform: scale(0);
+        transform-origin: bottom center;
+    }
+}
+
+.anim2Grow {
+    animation: createBox .5s;
+    position: fixed;
+    animation-fill-mode: forwards;
+    width: 100%;
+    bottom: 84px;
+    margin-top: -324px;
+    z-index: 4;
+}
+
+@keyframes createBox {
+    from {
+        transform: scale(0);
+        transform-origin: bottom center;
+    }
+
+    to {
+        transform: scale(1);
+        transform-origin: bottom center;
+    }
+}
+
+.anim2 {
+    animation: createB .5s;
+    position: fixed;
+    animation-fill-mode: forwards;
+    width: 100%;
+    bottom: 84px;
+    margin-top: -324px;
+    z-index: 4
+}
+
+@keyframes createB {
+    from {
+        transform: scale(1);
+        transform-origin: bottom center;
+    }
+
+    to {
+        transform: scale(0);
+        transform-origin: bottom center;
+    }
+}
+
+.image1 {
+    display: block;
+}
+
+.originalImage {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 5px;
+
+    /* margin-top: 5px; */
+    /* grid-gap: 30px; */
+}
+
+.originalImage img {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    /* height: 150px; */
+    /* padding: 10px; */
+}
+
+.twoColumnSquareImage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+}
+
+.twoColumnSquareImage img {
+    object-fit: cover;
+    height: 49vw;
+    width: 49vw;
+}
+
+.threeColumnSquareImage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+}
+
+
+.threeColumnSquareImage .image1 {
+    height: 32vw;
+    object-fit: cover;
+    width: 32vw;
+}
+
+
+.straggeredImageSize {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+}
+
+.straggeredImageSize img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+.description {
+    font-weight: 500;
+    /* margin-top: 20px !important; */
+    font-family: 'Poppins', 'sans-serif' !important;
+    font-size: 20px !important;
+    margin: 0px 5px 0px 0px !important
+}
+
+@media only screen and (min-width: 689px) {
+
+    .portfolio_name {
+        font-size: 65px !important;
+    }
+
+    .text_number {
+        margin-right: 5px !important;
+
+    }
+
+    .text_name {
+        margin-right: 15px !important;
+    }
+
+
+
+    .originalImage .image1 {
+        margin: 0px 0px 5px 0px;
+    }
+
+    .originalImage img {
+        width: 75%;
+        /* padding: 0 2rem 1.5rem 2rem; */
+    }
+
+}
+
+
+@media only screen and (max-width:688px) {
+    .portfolio_name {
+        font-size: 55px !important;
+    }
+.imageText{     
+    font-size: 18px;
+    margin: 0px 0px 10px 0px;
+    word-wrap: break-word;
+}
+}

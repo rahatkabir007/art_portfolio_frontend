@@ -1,0 +1,202 @@
+.containerR {
+    position: relative;
+    width: '100vw';
+    margin-top: '30%';
+
+}
+
+.bg {
+    background-color: black;
+    height: 100vh;
+}
+
+.imageContainer {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.topDrawer {
+    position: fixed;
+    height: 55px;
+    background-color: rgba(0, 0, 0, 0);
+    left: 0;
+    width: 50vw;
+    top: -55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+}
+
+.topDrawerSqueeze {
+    position: fixed;
+    height: 55px;
+    background-color: rgba(0, 0, 0, 0);
+    left: 0;
+    width: 50vw;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    animation: createBoxTS .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes createBoxTS {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: -55px;
+    }
+}
+
+.rightDrawer {
+    position: fixed;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 130px;
+    right: -130px;
+    display: flex;
+    top: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+}
+
+.rightDrawerSqueeze {
+    position: fixed;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.61);
+    box-shadow: 12px 0px 20px 16px rgba(0, 0, 0, 0.61);
+    right: -130px;
+    width: 130px;
+    display: flex;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    animation: createBoxRS .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes createBoxRS {
+    from {
+        right: 0px;
+        height: 100vh;
+    }
+
+    to {
+        right: -130px;
+        height: 100vh;
+    }
+}
+
+.topDrawerGrow {
+    position: fixed;
+    height: 55px;
+    background-color: rgba(0, 0, 0, 0);
+    left: 0;
+    width: 50vw;
+    top: -55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    animation: createBoxTG .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes createBoxTG {
+    from {
+        top: -55px;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+.rightDrawerGrow {
+    position: fixed;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.61);
+    box-shadow: 12px 0px 20px 16px rgba(0, 0, 0, 0.61);
+    right: 0;
+    width: 130px;
+    display: flex;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    animation: createBoxRG .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes createBoxRG {
+    from {
+        right: -130px;
+    }
+
+    to {
+        right: 0px;
+    }
+}
+
+.iconContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconContainer p {
+    font-family: 'Poppins';
+    font-size: 14px;
+    margin-bottom: 3rem;
+}
+
+.timeContainer {
+    width: 85px;
+    margin: 0 auto;
+}
+
+.timeInput {
+    min-width: 33.5px;
+    padding: 0 0px 0 10.5px;
+    border: none !important;
+}
+
+.timeInput p {
+    margin: 0;
+    font-family: 'Poppins';
+    padding: 0;
+    cursor: pointer;
+}
+
+.selectedButton {
+    color: white;
+    font-size: 15px !important;
+}
+
+.notSelectedButton {
+    font-size: 14px !important;
+    color: grey;
+}
+
+/* Mobile device */
+@media only screen and (max-width:688px) {
+    .imageContainer img {
+        height: 500px !important;
+        object-fit: cover;
+    }
+
+    .imageDetails {
+        position: absolute;
+        bottom: 0;
+    }
+}

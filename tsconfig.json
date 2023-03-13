@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types"
+    ],
+    "allowJs": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "es2017",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": false,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "incremental": true,
+    "noImplicitAny": true, //
+    "noImplicitReturns": true, //
+    "noImplicitThis": true, //
+    "noPropertyAccessFromIndexSignature": true, //
+    "noUnusedParameters": true, //
+    "strictNullChecks": true //
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/xavier/slick/sliders.tsx",
+    "pages/xavier/slick/sliders.tsx",
+    "next.config.js"
+  ]
+}

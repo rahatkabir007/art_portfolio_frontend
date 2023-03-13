@@ -1,0 +1,268 @@
+.containerR {
+    /* position: relative; */
+    width: '100vw';
+    margin-top: '30%';
+
+}
+
+.bg {
+    background-color: black;
+    height: 100vh;
+}
+
+.topDrawer {
+    position: fixed;
+    height: 55px;
+    background-color: rgba(0, 0, 0, 0);
+    left: 0;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+}
+
+.topDrawerSqueeze{
+    position: fixed;
+    height: 55px;
+    background-color: rgba(0, 0, 0, 0);
+    left: 0;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    animation: createBoxTS .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes createBoxTS {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: -55px;
+    }
+}
+
+.topDrawerGrow{
+    position: fixed;
+    height: 55px;
+    background-color: rgba(0, 0, 0, 0);
+    left: 0;
+    width: 100vw;
+    top: -55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    animation: createBoxTG .5s;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes createBoxTG {
+    from {
+        top:-55px;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+
+
+
+.downDrawer {
+    position: fixed;
+    height: 130px;
+    background-color: #585656;
+    left: 0;
+    width: 100vw;
+    bottom:-40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px
+}
+
+.downDrawerGrow{
+    position: fixed;
+    height:130px;
+    background-color: #585656;
+    left: 0;
+    width: 100vw;
+    bottom:-130px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    animation: createBoxDG .5s;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes createBoxDG {
+    from {
+        bottom:-130px;
+    }
+
+    to {
+        bottom:-40px;
+    }
+}
+
+
+.downDrawerSqueeze{
+    position: fixed;
+    height: 130px;
+    background-color: #585656;
+    left: 0;
+    width: 100vw;
+    bottom:-40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    animation: createBoxDS .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes createBoxDS {
+    from {
+        bottom:-40px;
+    }
+
+    to {
+        bottom:-130px;
+    }
+}
+
+
+.downDrawerGrowMore{
+    position: fixed;
+    height:130px;
+    background-color: #585656;
+    left: 0;
+    width: 100vw;
+    bottom:-40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    animation: createBoxDGM .5s;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes createBoxDGM {
+    from {
+        bottom:-40px;
+    }
+
+    to {
+        bottom:-20px;
+    }
+}
+
+.downDrawerGrowtoDown{
+    position: fixed;
+    height:130px;
+    background-color: #585656;
+    left: 0;
+    width: 100vw;
+    bottom:-20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    animation: createBoxDGtoD .5s;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes createBoxDGtoD {
+    from {
+        bottom:-20px;
+    }
+
+    to {
+        bottom:-40px;
+    }
+}
+
+.downDrawerGrowToLast{
+    position: fixed;
+    height:130px;
+    background-color: #585656;
+    left: 0;
+    width: 100vw;
+    bottom:-130px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    animation: createBoxDGL .5s;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes createBoxDGL {
+    from {
+        bottom:-130px;
+    }
+
+    to {
+        bottom:-20px;
+    }
+}
+.animate_animated {
+    -webkit-animation-duration: 1s !important;
+    animation-duration: 1s !important;
+    -webkit-animation-duration: var(--animate-duration) !important;
+    animation-duration: var(--animate-duration) !important;
+    -webkit-animation-fill-mode: both !important;
+    animation-fill-mode: both !important
+}
+
+.animate_flipInX {
+    -webkit-backface-visibility: visible!important;
+    backface-visibility: visible!important;
+    -webkit-animation-name: flipInX !important;
+    animation-name: flipInX !important;
+}
+
+@keyframes flipInX{
+0% {
+    -webkit-transform: perspective(400px) rotateX(180deg) !important;
+    transform: perspective(1500px) rotateX(90deg) !important;
+    -webkit-animation-timing-function: ease-in !important;
+    animation-timing-function: ease-in !important;
+    opacity: 0 !important;
+}
+
+80% {
+    -webkit-transform: perspective(400px) rotateX(180deg) !important;
+    transform: perspective(1500px) rotateX(0deg) !important;
+    -webkit-animation-timing-function: ease-in !important;
+    animation-timing-function: ease-in!important;
+    opacity: 0 !important;
+}
+
+100%{
+    transform: perspective(1500px);
+}
+}
+
+
+
+
+/* .containerR {
+    position: relative;
+ 
+    width: '100vw';
+    
+    margin-top: '30%';
+
+}
+
+
+
+.bg {
+
+    background-color: black;
+    height: 98vh;
+   
+}
+
+.MuiBackdrop-root {
+    background-color: green !important;
+}
+ */

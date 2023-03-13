@@ -7,7 +7,6 @@ import { ArtPortfolioServer } from '../../src/Others/ArtPortfolioServer';
 import { useRouter } from 'next/router';
 import { CookiesHandler } from '../Helpers/CookiesHandler';
 import { useSnackbar } from 'notistack';
-import { DecryptCipher } from '../Helpers/DecryptCipher';
 // import Link from 'next/link';
 
 interface Props {
@@ -58,38 +57,38 @@ const Login: React.FC<Props> = () => {
         }
     }
 
-    const handleFacebookLogin = async () => {
-        actions.setDialogLoading(true)
-        const { token, user, photoUrl } = await SocialLogin.loginWithFacebook()
-        if (token && user?.email && user?.displayName && photoUrl) {
-            const { email, displayName } = user
-            const { res, err } = await ArtPortfolioServer.login(token, email, displayName, photoUrl, "facebook")
-            if (err) {
-                enqueueSnackbar('Server Error', { variant: 'error', autoHideDuration: 2000 });
-                setTimeout(() => {
-                    actions.setDialogLoading(false)
-                }, 1000)
-            }
-            else {
-                console.log('res', res)
-                CookiesHandler.setAccessToken(res.access_token)
-                if (res.slug) {
-                    CookiesHandler.setSlug(res.slug as string)
-                }
-                actions.setSocialPicture(photoUrl)
-                localStorage.clear();
-                sessionStorage.clear();
-                router.push(`/users/${res?.slug}`)
-                setTimeout(() => {
-                    actions.setDialogLoading(false)
-                }, 1000)
-                // Todo fix params
-                enqueueSnackbar("Login successful !", { variant: 'success', autoHideDuration: 2000 })
+    // const handleFacebookLogin = async () => {
+    //     actions.setDialogLoading(true)
+    //     const { token, user, photoUrl } = await SocialLogin.loginWithFacebook()
+    //     if (token && user?.email && user?.displayName && photoUrl) {
+    //         const { email, displayName } = user
+    //         const { res, err } = await ArtPortfolioServer.login(token, email, displayName, photoUrl, "facebook")
+    //         if (err) {
+    //             enqueueSnackbar('Server Error', { variant: 'error', autoHideDuration: 2000 });
+    //             setTimeout(() => {
+    //                 actions.setDialogLoading(false)
+    //             }, 1000)
+    //         }
+    //         else {
+    //             console.log('res', res)
+    //             CookiesHandler.setAccessToken(res.access_token)
+    //             if (res.slug) {
+    //                 CookiesHandler.setSlug(res.slug as string)
+    //             }
+    //             actions.setSocialPicture(photoUrl)
+    //             localStorage.clear();
+    //             sessionStorage.clear();
+    //             router.push(`/users/${res?.slug}`)
+    //             setTimeout(() => {
+    //                 actions.setDialogLoading(false)
+    //             }, 1000)
+    //             // Todo fix params
+    //             enqueueSnackbar("Login successful !", { variant: 'success', autoHideDuration: 2000 })
 
-            }
+    //         }
 
-        }
-    }
+    //     }
+    // }
 
     return <Grid className={styles['loginContainer']} container >
         <Grid className={styles['title']}>

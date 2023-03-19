@@ -4,8 +4,7 @@ import { IPortfolio, IUser, portfolioCreate, PSlugPagenumberObj, IUpdateImg } fr
 import { IGetOnePortfolioResponse, ILoginResponse, IndexAllPortfolioPortfolioResponse, IUserInfoResponse, IUserResponse } from "../../interfaces/responseInterface"
 import { callFetch, MyFetchInterface } from "./CallFetch"
 // const API_ENDPOINT = "https://art-portfolio-richit.herokuapp.com"
-// export const API_ENDPOINT = process.env['NEXT_PUBLIC_API_ENDPOINT']
-export const API_ENDPOINT = "http://54.186.56.31:8000"
+export const API_ENDPOINT = process.env['NEXT_PUBLIC_API_ENDPOINT']
 
 export interface LoginInterface {
     status: number

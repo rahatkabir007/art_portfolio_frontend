@@ -54,10 +54,10 @@ const EditPictureDetailsDialog: React.FC<Props> = (props) => {
             avatarSize: {
                 width: '50px',
                 height: '50px',
-                backgroundColor: states?.color,
+                backgroundColor: states?.userInfo?.color,
                 color: 'white',
                 "&:hover": {
-                    backgroundColor: states?.color
+                    backgroundColor: states?.userInfo?.color
                 }
             },
         }

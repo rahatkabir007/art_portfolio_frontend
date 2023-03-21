@@ -23,6 +23,7 @@ const Login: React.FC<Props> = () => {
 
     useEffect(() => {
         SocialLogin.initFirebase()
+        enqueueSnackbar("For Better Experience, Use Mobile view !", { variant: 'success', autoHideDuration: 4000 })
     }, [])
 
 
@@ -117,7 +118,11 @@ const Login: React.FC<Props> = () => {
         </button> */}
 
         <Grid className={styles['privacy']}>
-            <p>By logging in, you agree to our terms <br /> and conditons and <span>Privacy Policy</span></p>
+            {/* <p>By logging in, you agree to our terms <br /> and conditons and <span>Privacy Policy</span></p>
+             */}
+            <p>This project is working on a Free Server as it is a Personal project. If you are logging in for the first time,</p>
+            <p>Then Please login with Google and wait for one minute to start the server. Then Refresh and Login again! </p>
+            <p>Thank You for your patience! 🧡</p>
         </Grid>
 
         {/* <Grid className={styles['bottomNav']}>

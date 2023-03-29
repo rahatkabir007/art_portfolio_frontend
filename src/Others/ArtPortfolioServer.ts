@@ -14,6 +14,15 @@ export interface LoginInterface {
 }
 
 export class ArtPortfolioServer {
+
+    static async callWebsite(): Promise<IndexAllPortfolioPortfolioResponse> {
+        const requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+        return await callFetch(`${API_ENDPOINT}`, requestOptions)
+    }
+
     static async login(token: string, email: string, fullName: string, avatar: string, tokenType: "google" | "facebook"): Promise<ILoginResponse> {
         console.log(token);
         console.log(API_ENDPOINT)

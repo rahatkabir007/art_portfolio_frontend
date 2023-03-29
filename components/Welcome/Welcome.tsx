@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import { Fab, Grid } from "@material-ui/core";
 // import { useActions, useAppState } from '../../src/Overmind/OvermindHelper';
@@ -6,6 +6,7 @@ import styles from './welcome.module.css';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { useRouter } from 'next/router';
 import { Gtag } from '../../src/Others/Gtag';
+import { ArtPortfolioServer } from '../../src/Others/ArtPortfolioServer';
 // import { ReactPixel } from 'react-facebook-pixel';
 interface Props {
 
@@ -41,6 +42,16 @@ const Welcome: React.FC<Props> = () => {
     // Vars
 
     // JSX
+    const callApi = async () => {
+        const { res, err } = await ArtPortfolioServer.callWebsite();
+        if (err) {
+            console.log(err);
+        }
+        console.log(res)
+    }
+    useEffect(() => {
+        callApi()
+    }, [])
 
     return (
         <Grid className={styles['welcomeContainer']} container >

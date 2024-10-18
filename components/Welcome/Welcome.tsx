@@ -71,18 +71,18 @@ const Welcome: React.FC<Props> = () => {
 
 
 
-            <Grid className={styles['welcome']}
+            <div className={styles['welcome']}
             // onClick={() => ReactPixel.track('abc', { currency: "USD", value: 30.00 })}
             >
                 <p style={{ margin: '0 auto' }}>WELCOME</p>
-            </Grid>
-            <Grid className={styles['privacy']}>
+            </div>
+            <div className={styles['privacy']}>
                 <p style={{ width: '75vw', margin: 'auto' }}> Discover the latest trends in design and
                     find the best result here.</p>
-            </Grid>
+            </div>
 
 
-            <Grid className={styles['buttonStyle']}>
+            <div className={styles['buttonStyle']}>
 
                 <Fab aria-label="add" classes={{ root: classes.avatarSize }} onClick={() => {
                     router.push('/login')
@@ -90,7 +90,7 @@ const Welcome: React.FC<Props> = () => {
                 }}>
                     <ArrowForwardIcon className="buttonstyle" />
                 </Fab>
-            </Grid>
+            </div>
 
         </div>
     )

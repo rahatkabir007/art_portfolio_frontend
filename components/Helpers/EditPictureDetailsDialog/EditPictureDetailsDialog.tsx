@@ -156,8 +156,8 @@ const EditPictureDetailsDialog: React.FC<Props> = (props) => {
             >
                 <form onSubmit={handleSubmit(onSubmit)}>
 
-                    <Grid className={styles['containAll']}>
-                        <Grid
+                    <div className={styles['containAll']}>
+                        <div
                             // className={styles.title}
 
                             className={simplified ? `${styles['title2']}` : `${styles['title']}`}
@@ -197,7 +197,7 @@ const EditPictureDetailsDialog: React.FC<Props> = (props) => {
 
 
                             }
-                        </Grid >
+                        </div >
 
                         {
                             !simplified && <Grid
@@ -224,7 +224,7 @@ const EditPictureDetailsDialog: React.FC<Props> = (props) => {
                             </Grid>
                         </Grid>
 
-                    </Grid >
+                    </div >
                 </form >
             </Dialog >
         </Grid >

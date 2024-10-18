@@ -250,7 +250,7 @@ const Index: React.FC<Props> = () => {
                                 </Grid >
                                 <Grid className={styles['container1']}>
                                     <Grid className={styles['containAll']}>
-                                        <Grid className={styles['name']}>
+                                        <div className={styles['name']}>
                                             <label>Name</label>
                                             <TextField variant='standard' InputProps={{ disableUnderline: true, style: { color: "black" } }}
                                                 inputProps={{
@@ -264,8 +264,8 @@ const Index: React.FC<Props> = () => {
                                                 {...register('name', { required: 'required' })}
                                             />
                                             {errors['name'] && <span className={styles['error']}>{errors['name'].message?.toString()}</span>}
-                                        </Grid>
-                                        <Grid className={styles['description']}>
+                                        </div>
+                                        <div className={styles['description']}>
                                             <label>DESCRIPTION</label>
                                             <TextareaAutosize style={{ fontSize: '20px !important' }}
                                                 // ref={desRef}
@@ -273,7 +273,7 @@ const Index: React.FC<Props> = () => {
                                                 {...register('description', { required: 'required' })}
                                             />
                                             {errors['description'] && <span className={styles['error']}>{errors['description'].message?.toString()}</span>}
-                                        </Grid>
+                                        </div>
                                         <Grid className={styles['yearContainer']}>
                                             <Grid className={styles['year']}>
                                                 <label id={styles['year']}>YEAR</label>
@@ -328,7 +328,7 @@ const Index: React.FC<Props> = () => {
 
                                             </Grid>
                                         </Grid>
-                                        <Grid className={styles['privacy']}>
+                                        <div className={styles['privacy']}>
                                             <label>Privacy</label>
                                             <RadioGroup
                                                 className={styles['privacyOptions']}
@@ -337,7 +337,7 @@ const Index: React.FC<Props> = () => {
                                                 <FormControlLabel  {...register("privacy")} value='public' control={<Radio style={{ color: `${states.userInfo.color}` }} />} label="Public" />
                                                 <FormControlLabel  {...register("privacy")} value='private' control={<Radio style={{ color: `${states.userInfo.color}` }} />} label="Private" />
                                             </RadioGroup>
-                                        </Grid>
+                                        </div>
                                         <Grid className={styles['picture']}>
                                             <label>picture</label>
 

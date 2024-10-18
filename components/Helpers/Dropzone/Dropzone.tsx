@@ -169,7 +169,7 @@ const Dropzone: React.FC<Props> = ({ files, filesUrl, setFiles, setFilesUrl, edi
 
     return <>
         <SortableList onSortEnd={onSortEnd} className={styles["totalImageContainer"]}>
-            <Grid className={styles["imageContainer"]}>
+            <div className={styles["imageContainer"]}>
 
                 {editportfolioDetails?.pictures?.map((item, index) => {
                     return (
@@ -230,13 +230,13 @@ const Dropzone: React.FC<Props> = ({ files, filesUrl, setFiles, setFilesUrl, edi
                     <input {...getInputProps()}
                         type="file"
                     />
-                    <Grid className={styles["root"]}>
+                    <div className={styles["root"]}>
                         <FilterHdrIcon />
                         <p>Add Pictures</p>
-                    </Grid>
+                    </div>
                 </Grid>
 
-            </Grid>
+            </div>
         </SortableList>
     </>
 

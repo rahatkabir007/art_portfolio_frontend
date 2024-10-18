@@ -90,19 +90,19 @@ const DropzoneCreate: React.FC<Props> = ({ files, filesUrl, setFiles, setFilesUr
 
     return <>
         <SortableList onSortEnd={onSortEnd} >
-            <Grid className={styles['imageContainer']}>
+            <div className={styles['imageContainer']}>
                 {thumbs}
                 <Grid {...getRootProps({ className: 'dropzone' })} >
                     <input {...getInputProps()}
                         type="file"
                     />
-                    <Grid className={styles['root']}>
+                    <div className={styles['root']}>
                         <FilterHdrIcon />
                         <p>Add Pictures</p>
-                    </Grid>
+                    </div>
                 </Grid>
 
-            </Grid>
+            </div>
         </SortableList>
     </>
 

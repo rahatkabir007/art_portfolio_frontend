@@ -54,11 +54,11 @@ const Welcome: React.FC<Props> = () => {
     }, [])
 
     return (
-        <Grid className={styles['welcomeContainer']} container >
-            <Grid className={styles['title']}>
+        <div className={styles['welcomeContainer']}  >
+            <div className={styles['title']}>
                 <p>Art Portfolio</p>
-            </Grid>
-            <Grid className={styles['image']}>
+            </div>
+            <div className={styles['image']}>
                 <picture>
                     <img
                         onClick={() => {
@@ -67,7 +67,7 @@ const Welcome: React.FC<Props> = () => {
                         }}
                         style={{ backgroundColor: '#e3e3e3', borderRadius: '20px' }} src='images/artPortfolio.png' alt="" />
                 </picture>
-            </Grid>
+            </div>
 
 
 
@@ -92,7 +92,7 @@ const Welcome: React.FC<Props> = () => {
                 </Fab>
             </Grid>
 
-        </Grid>
+        </div>
     )
 
 }

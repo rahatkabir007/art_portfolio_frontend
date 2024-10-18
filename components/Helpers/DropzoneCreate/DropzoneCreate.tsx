@@ -6,7 +6,7 @@ import styles from './DropzoneCreate.module.css';
 import FilterHdrIcon from "@mui/icons-material/FilterHdr";
 import CloseIcon from '@mui/icons-material/Close';
 import SortableList, { SortableItem } from "react-easy-sort";
-import arrayMove from "array-move";
+import { arrayMoveImmutable } from 'array-move';
 import { useSnackbar } from 'notistack';
 
 interface Props {
@@ -54,8 +54,8 @@ const DropzoneCreate: React.FC<Props> = ({ files, filesUrl, setFiles, setFilesUr
     });
 
     const onSortEnd = (oldIndex: number, newIndex: number) => {
-        const narr = arrayMove(filesUrl, oldIndex, newIndex)
-        const nFiles = arrayMove(files, oldIndex, newIndex)
+        const narr = arrayMoveImmutable(filesUrl, oldIndex, newIndex)
+        const nFiles = arrayMoveImmutable(files, oldIndex, newIndex)
 
         setFilesUrl(narr);
         setFiles(nFiles);

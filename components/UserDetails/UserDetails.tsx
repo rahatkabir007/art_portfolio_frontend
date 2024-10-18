@@ -144,11 +144,16 @@ const UserDetails: React.FC<Props> = ({ handleOnChange, setImgPath, data, logged
                             fontSize: '35px',
                             letterSpacing: '0.7px',
                             textAlign: 'center',
-                            display: 'inline'
+                            display: 'inline',
                         }
                     }}
                     inputProps={{
                         maxLength: 30
+                    }}
+                    sx={{
+                        '& .MuiInputBase-input': {
+                            padding: 0,
+                        }
                     }}
                 />
                 <TextField

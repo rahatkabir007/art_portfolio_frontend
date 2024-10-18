@@ -257,6 +257,11 @@ const Index: React.FC<Props> = () => {
                                                 inputProps={{
                                                     maxLength: 30
                                                 }}
+                                                sx={{
+                                                    '& .MuiInputBase-input': {
+                                                        padding: 0,
+                                                    }
+                                                }}
                                                 {...register('name', { required: 'required' })}
                                             />
                                             {errors['name'] && <span className={styles['error']}>{errors['name'].message?.toString()}</span>}

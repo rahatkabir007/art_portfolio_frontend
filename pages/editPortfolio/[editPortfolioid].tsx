@@ -390,7 +390,11 @@ const EditPortfolioid: React.FC<Props> = () => {
                                                         inputProps={{
                                                             maxLength: 25
                                                         }}
-
+                                                        sx={{
+                                                            '& .MuiInputBase-input': {
+                                                                padding: 0,
+                                                            }
+                                                        }}
                                                         inputRef={nameRef}
                                                     />
                                                     <ErrorMessage component='div' className={styles['error']} name="portfolioName" />

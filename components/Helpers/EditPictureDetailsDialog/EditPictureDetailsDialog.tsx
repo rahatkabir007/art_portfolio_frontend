@@ -170,6 +170,11 @@ const EditPictureDetailsDialog: React.FC<Props> = (props) => {
                                         inputProps={{
                                             maxLength: 25
                                         }}
+                                        sx={{
+                                            '& .MuiInputBase-input': {
+                                                padding: 0,
+                                            }
+                                        }}
                                         {...register('mainTitle', { required: 'Title Required' })} />
                                     {errors['mainTitle'] && <span className={styles['error']}>{errors['mainTitle'].message?.toString()}</span>}
                                 </>
@@ -181,6 +186,11 @@ const EditPictureDetailsDialog: React.FC<Props> = (props) => {
                                             defaultValue={states.portfolioDetailsWithImages?.pictures[currentIndex]?.name}
                                             inputProps={{
                                                 maxLength: 25
+                                            }}
+                                            sx={{
+                                                '& .MuiInputBase-input': {
+                                                    padding: 0,
+                                                }
                                             }}
                                             {...register('name')} />
                                     </>

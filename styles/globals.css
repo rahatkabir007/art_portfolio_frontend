@@ -16,3 +16,7 @@ a {
   box-sizing: border-box;
   clear: both;
 }
+
+.MuiOutlinedInput-notchedOutline{
+  border: none !important;
+}

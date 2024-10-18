@@ -8,7 +8,7 @@ import FilterHdrIcon from "@mui/icons-material/FilterHdr";
 import CloseIcon from '@mui/icons-material/Close';
 import { useSnackbar } from 'notistack';
 import SortableList, { SortableItem } from "react-easy-sort";
-import arrayMove from "array-move";
+import { arrayMoveImmutable } from 'array-move';
 import { IPicture, IPortfolio } from '../../../interfaces/dataInterface';
 
 interface Props {
@@ -108,7 +108,7 @@ const Dropzone: React.FC<Props> = ({ files, filesUrl, setFiles, setFilesUrl, edi
         if (!editportfolioDetails?.pictures) {
             return
         }
-        const narr = arrayMove(editportfolioDetails?.pictures, oldIndex, newIndex)
+        const narr = arrayMoveImmutable(editportfolioDetails?.pictures, oldIndex, newIndex)
 
 
         setEditPortfolioDetails({

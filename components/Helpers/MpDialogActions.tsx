@@ -1,5 +1,5 @@
 import React, { MouseEventHandler } from 'react'
-import { Button, DialogActions } from "@material-ui/core";
+import { Button, DialogActions } from "@mui/material";
 
 interface IActionButton {
     text: string,

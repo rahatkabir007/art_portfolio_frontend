@@ -1,5 +1,5 @@
 import React, { MouseEventHandler } from 'react'
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import SvgIconRenderer from '../Helpers/SvgIconRenderer';
 import { useActions, useAppState } from '../../src/Overmind/OvermindHelper';
 

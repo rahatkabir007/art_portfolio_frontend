@@ -1,4 +1,4 @@
-import { Grid } from '@material-ui/core'
+import { Grid } from '@mui/material'
 import React from 'react'
 import { useAppState } from '../../src/Overmind/OvermindHelper';
 import styles from './UserFaq.module.css';

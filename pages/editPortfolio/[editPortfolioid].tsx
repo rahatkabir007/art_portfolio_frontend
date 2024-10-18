@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import { Fab, FormControlLabel, Grid, Radio, RadioGroup, TextareaAutosize, TextField } from "@material-ui/core";
+import { makeStyles } from '@mui/styles';
+import { Fab, FormControlLabel, Grid, Radio, RadioGroup, TextareaAutosize, TextField } from "@mui/material";
 import styles from "./editPortfolio.module.css";
-import DoneIcon from '@material-ui/icons/Done';
+import DoneIcon from '@mui/icons-material/Done';
 import { Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useRouter } from 'next/router';
@@ -10,7 +10,7 @@ import Dropzone from '../../components/Helpers/Dropzone/Dropzone';
 import KeyboardSpaceBackIcon from '../../components/Helpers/KeyboardSpaceBackIcon';
 import { useActions, useAppState } from '../../src/Overmind/OvermindHelper';
 // import { CookiesHandler } from '../../components/Helpers/CookiesHandler';
-import { Skeleton } from '@material-ui/lab';
+import { Skeleton } from "@mui/material";
 import { ArtPortfolioOtherApiServer } from '../../src/Others/ArtPortfolioOtherApiServer';
 import { ArtPortfolioServer } from '../../src/Others/ArtPortfolioServer';
 import { Splide, SplideSlide } from '@splidejs/react-splide';

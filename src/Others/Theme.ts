@@ -1,4 +1,4 @@
-import { createTheme } from "@material-ui/core/styles";
+import { createTheme } from "@mui/material/styles";
 import { AppColors } from "./AppColors";
 
 // Create a theme instance.
@@ -26,11 +26,13 @@ export const theme = createTheme({
     //   default: "#fff",
     // },
   },
-  overrides: {
+  components: {
     MuiBackdrop: {
-      root: {
-        backgroundColor: 'rgba(0, 0, 0, 0.04)',
-      }
-    }
-  }
+      styleOverrides: {
+        root: {
+          backgroundColor: 'rgba(0, 0, 0, 0.04)',
+        },
+      },
+    },
+  },
 });

@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography } from "@material-ui/core";
+import { makeStyles } from '@mui/styles';
+import { Grid, Typography } from "@mui/material";
 import { useActions, useAppState } from '../../src/Overmind/OvermindHelper';
 import { motion } from "framer-motion";
 import styles from './styles.module.css';
-import AddIcon from '@material-ui/icons/Add';
-import Fab from '@material-ui/core/Fab';
-import { Skeleton } from '@material-ui/lab';
+import AddIcon from '@mui/icons-material/Add';
+import Fab from '@mui/material/Fab';
+import { Skeleton } from "@mui/material";
 import { ArtPortfolioServer } from '../../src/Others/ArtPortfolioServer';
 import EditPictureDetailsDialog from '../../components/Helpers/EditPictureDetailsDialog/EditPictureDetailsDialog';
 import { useSwipeable } from 'react-swipeable';

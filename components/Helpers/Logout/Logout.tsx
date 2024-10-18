@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import { useActions } from '../../../src/Overmind/OvermindHelper';
 import styles from './Logout.module.css';
 import { SocialLogin } from '../SocialLogin';

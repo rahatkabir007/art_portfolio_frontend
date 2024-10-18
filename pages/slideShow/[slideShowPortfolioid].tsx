@@ -1,5 +1,5 @@
 import React, { RefObject, useEffect, useRef, useState } from 'react'
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import styles from './slideShowPortfolio.module.css';
 import { useActions } from '../../src/Overmind/OvermindHelper';
 import { useRouter } from 'next/router';
@@ -8,9 +8,9 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import Image from "next/image";
 import { useSnackbar } from 'notistack';
-import RepeatIcon from '@material-ui/icons/Repeat';
-import InfoIcon from '@material-ui/icons/Info';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import RepeatIcon from '@mui/icons-material/Repeat';
+import InfoIcon from '@mui/icons-material/Info';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { IPicture } from '../../interfaces/dataInterface';
 
 interface Props {

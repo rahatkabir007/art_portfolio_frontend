@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import { Fab, Grid, TextareaAutosize, Typography, FormControlLabel, TextField, RadioGroup, Radio } from "@material-ui/core";
+import { makeStyles } from '@mui/styles';
+import { Fab, Grid, TextareaAutosize, Typography, FormControlLabel, TextField, RadioGroup, Radio } from "@mui/material";
 import { useActions, useAppState } from '../../../src/Overmind/OvermindHelper';
 import styles from './styles.module.css';
 import DropzoneCreate from '../../../components/Helpers/DropzoneCreate/DropzoneCreate';
-import DoneIcon from '@material-ui/icons/Done';
-import ClearIcon from '@material-ui/icons/Clear';
+import DoneIcon from '@mui/icons-material/Done';
+import ClearIcon from '@mui/icons-material/Clear';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useForm } from 'react-hook-form';
@@ -15,7 +15,7 @@ import { ArtPortfolioOtherApiServer } from '../../../src/Others/ArtPortfolioOthe
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 // Default theme
 import '@splidejs/react-splide/css';
-import { Skeleton } from '@material-ui/lab';
+import { Skeleton } from "@mui/material";
 import { dataCreate } from '../../../interfaces/dataInterface';
 
 
@@ -70,7 +70,7 @@ const Index: React.FC<Props> = () => {
                 display: 'flex',
                 height: '100%',
                 '& > * + *': {
-                    marginLeft: theme.spacing(2),
+                    marginLeft: 2,
                 },
                 justifyContent: 'center',
                 alignItems: 'center'
@@ -254,9 +254,9 @@ const Index: React.FC<Props> = () => {
                                         <Grid className={styles['name']}>
                                             <label>Name</label>
                                             <TextField InputProps={{ disableUnderline: true, style: { color: "black" } }}
-                                            inputProps={{
-                                                maxLength: 30
-                                              }}
+                                                inputProps={{
+                                                    maxLength: 30
+                                                }}
                                                 {...register('name', { required: 'required' })}
                                             />
                                             {errors['name'] && <span className={styles['error']}>{errors['name'].message?.toString()}</span>}
@@ -265,7 +265,7 @@ const Index: React.FC<Props> = () => {
                                             <label>DESCRIPTION</label>
                                             <TextareaAutosize style={{ fontSize: '20px !important' }}
                                                 // ref={desRef}
-                                            maxLength={300}
+                                                maxLength={300}
                                                 {...register('description', { required: 'required' })}
                                             />
                                             {errors['description'] && <span className={styles['error']}>{errors['description'].message?.toString()}</span>}
@@ -274,7 +274,7 @@ const Index: React.FC<Props> = () => {
                                             <Grid className={styles['year']}>
                                                 <label id={styles['year']}>YEAR</label>
                                                 <Grid className={styles['checkboxContainer']}>
-                                                    <input type="checkbox" id="check" style={{ accentColor: states.userInfo?.color}} onClick={() => { handleCheckboxChange(!yearVisible as boolean) }} ref={noneRef} />
+                                                    <input type="checkbox" id="check" style={{ accentColor: states.userInfo?.color }} onClick={() => { handleCheckboxChange(!yearVisible as boolean) }} ref={noneRef} />
                                                     <label htmlFor='check' id={styles['none']}>None</label>
                                                 </Grid>
                                             </Grid>

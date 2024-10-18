@@ -2,13 +2,13 @@
 import { AnimatePresence } from "framer-motion";
 import React, { useEffect } from "react";
 import { AppProps } from "next/app";
-import { config} from "../src/Overmind/OvermindHelper";
+import { config } from "../src/Overmind/OvermindHelper";
 import { createOvermind } from "overmind";
 import { Provider } from "overmind-react";
 import { useRouter } from 'next/router'
 // import { animations } from "../interfaces/lib/animations";
 import { SnackbarProvider } from "notistack";
-import { Fade } from "@material-ui/core";
+import { Fade } from "@mui/material";
 import Loader from "../components/Helpers/Loader";
 import { Gtag } from '../src/Others/Gtag'
 
@@ -30,12 +30,12 @@ export default function MyApp(props: AppProps) {
   //    if (window.scrollY)
   //    sessionStorage.setItem(window.location.pathname, JSON.stringify(window.scrollY))
   //   })
-    
+
   // })
 
- 
 
- 
+
+
 
 
   React.useEffect(() => {
@@ -82,7 +82,7 @@ export default function MyApp(props: AppProps) {
               // autoHideDuration={4000}
               dense={false}
             >
-                <Component {...pageProps} />
+              <Component {...pageProps} />
             </SnackbarProvider>
           </AnimatePresence>
           {/* </m.div>

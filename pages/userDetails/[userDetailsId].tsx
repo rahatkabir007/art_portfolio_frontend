@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material';
 import UserAccent from '../../components/UserAccent/UserAccent';
 import UserFaq from '../../components/UserFaq/UserFaq';
 // import Logout from '../components/Helpers/Logout/Logout';
 import KeyboardSpaceBackIcon from '../../components/Helpers/KeyboardSpaceBackIcon';
 import { ArtPortfolioServer } from '../../src/Others/ArtPortfolioServer';
 import { useActions, useAppState } from '../../src/Overmind/OvermindHelper';
-import { Skeleton } from '@material-ui/lab';
+import { Skeleton } from "@mui/material";
 import { useSnackbar } from 'notistack';
 import UserDetails from '../../components/UserDetails/UserDetails';
 import { IUser } from '../../interfaces/dataInterface';

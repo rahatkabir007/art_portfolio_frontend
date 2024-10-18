@@ -2,32 +2,32 @@
 import React, {
   useEffect, useState
 } from 'react';
-import { Fab, Grid, Typography } from "@material-ui/core";
+import { Fab, Grid, Typography } from "@mui/material";
 import { useActions, useAppState } from '../../../../src/Overmind/OvermindHelper';
 import { useRouter } from 'next/router';
 import styles from "./portfolioid.module.css";
-import MenuIcon from '@material-ui/icons/Menu';
-import { makeStyles } from '@material-ui/core/styles';
-import GetAppIcon from '@material-ui/icons/GetApp';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import EditIcon from '@material-ui/icons/Edit';
-import DeleteIcon from '@material-ui/icons/Delete';
+import MenuIcon from '@mui/icons-material/Menu';
+import { makeStyles } from '@mui/styles';
+import GetAppIcon from '@mui/icons-material/GetApp';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
 import { CookiesHandler } from '../../../../components/Helpers/CookiesHandler';
-import { Skeleton } from '@material-ui/lab';
+import { Skeleton } from "@mui/material";
 import KeyboardSpaceBackIcon from '../../../../components/Helpers/KeyboardSpaceBackIcon';
 import { ArtPortfolioServer } from '../../../../src/Others/ArtPortfolioServer';
 import PortfolioMenu from '../../../../components/PortfolioMenu/PortfolioMenu';
 import { useSnackbar } from 'notistack';
 // import ShareMenu from '../../../../components/ShareMenu/ShareMenu';
 import DeleteMenu from '../../../../components/DeleteMenu/DeleteMenu';
-import ShareIcon from '@material-ui/icons/Share';
-import StyleIcon from '@material-ui/icons/Style';
+import ShareIcon from '@mui/icons-material/Share';
+import StyleIcon from '@mui/icons-material/Style';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 //@ts-ignore
 import StackGrid from "react-stack-grid";
 import { motion } from "framer-motion";
 import { IPortfolio } from '../../../../interfaces/dataInterface';
-import FeedbackIcon from '@material-ui/icons/Feedback';
+import FeedbackIcon from '@mui/icons-material/Feedback';
 
 
 

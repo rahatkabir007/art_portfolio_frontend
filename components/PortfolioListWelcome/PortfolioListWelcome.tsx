@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import { useAppState } from '../../src/Overmind/OvermindHelper';
 import styles from "./PortfolioListWelcome.module.css"
 

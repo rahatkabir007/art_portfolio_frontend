@@ -1,7 +1,7 @@
-import { Fab, Grid, TextField } from '@material-ui/core';
+import { Fab, Grid, TextField } from '@mui/material';
 import React, { useState } from 'react'
 import styles from "./UserDetails.module.css";
-import AddIcon from '@material-ui/icons/Add';
+import AddIcon from '@mui/icons-material/Add';
 import { useAppState } from '../../src/Overmind/OvermindHelper';
 import { useDropzone } from 'react-dropzone';
 import { IUser } from '../../interfaces/dataInterface';

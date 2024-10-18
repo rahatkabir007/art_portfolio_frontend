@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import { Fab, Grid } from "@material-ui/core";
+import { makeStyles } from '@mui/styles';
+import { Fab, Grid } from "@mui/material";
 // import { useActions, useAppState } from '../../src/Overmind/OvermindHelper';
 import styles from './welcome.module.css';
-import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useRouter } from 'next/router';
 import { Gtag } from '../../src/Others/Gtag';
 import { ArtPortfolioServer } from '../../src/Others/ArtPortfolioServer';

@@ -1,11 +1,11 @@
 import React, { Dispatch, useEffect } from 'react'
-// import { makeStyles } from '@material-ui/core/styles';
-import { Grid } from "@material-ui/core";
+// import { makeStyles } from '@mui/styles';
+import { Grid } from "@mui/material";
 import { useActions, useAppState } from '../../../src/Overmind/OvermindHelper';
 import { useDropzone } from 'react-dropzone';
 import styles from './Dropzone.module.css';
-import FilterHdrIcon from "@material-ui/icons/FilterHdr";
-import CloseIcon from '@material-ui/icons/Close';
+import FilterHdrIcon from "@mui/icons-material/FilterHdr";
+import CloseIcon from '@mui/icons-material/Close';
 import { useSnackbar } from 'notistack';
 import SortableList, { SortableItem } from "react-easy-sort";
 import arrayMove from "array-move";
@@ -34,7 +34,7 @@ interface Props {
 
 
 
-const Dropzone: React.FC<Props> = ({ files,filesUrl, setFiles, setFilesUrl, editportfolioDetails, setEditPortfolioDetails, portfolioDeletedImgDetails, setPortfolioDeletedImgDetails }) => {
+const Dropzone: React.FC<Props> = ({ files, filesUrl, setFiles, setFilesUrl, editportfolioDetails, setEditPortfolioDetails, portfolioDeletedImgDetails, setPortfolioDeletedImgDetails }) => {
     const actions = useActions();
     const states = useAppState();
     // const classes = useStyles();

@@ -1,10 +1,10 @@
 import React, { Dispatch } from 'react'
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import { useActions, useAppState } from '../../../src/Overmind/OvermindHelper';
 import { useDropzone } from 'react-dropzone';
 import styles from './DropzoneCreate.module.css';
-import FilterHdrIcon from "@material-ui/icons/FilterHdr";
-import CloseIcon from '@material-ui/icons/Close';
+import FilterHdrIcon from "@mui/icons-material/FilterHdr";
+import CloseIcon from '@mui/icons-material/Close';
 import SortableList, { SortableItem } from "react-easy-sort";
 import arrayMove from "array-move";
 import { useSnackbar } from 'notistack';

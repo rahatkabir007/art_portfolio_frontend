@@ -1,7 +1,7 @@
 import React from 'react'
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import { useAppState } from '../../src/Overmind/OvermindHelper';
-import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import { useRouter } from 'next/router';
 
 interface Props {

@@ -1,23 +1,23 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import { Dialog, Fab, Grid, Menu, MenuItem } from "@material-ui/core";
+import { makeStyles } from '@mui/styles';
+import { Dialog, Fab, Grid, Menu, MenuItem } from "@mui/material";
 import { useActions, useAppState } from '../../src/Overmind/OvermindHelper';
 import styles from './downloadPortfolio.module.css';
 import Link from 'next/link';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import GetAppIcon from '@material-ui/icons/GetApp';
-import PhotoAlbumIcon from '@material-ui/icons/PhotoAlbum';
-import ImageIcon from '@material-ui/icons/Image';
-import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft';
-import FontDownloadIcon from '@material-ui/icons/FontDownload';
-import ShortTextIcon from '@material-ui/icons/ShortText';
-// import AccountCircleIcon from '@material-ui/icons/AccountCircle';
-import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
-import PanoramaIcon from '@material-ui/icons/Panorama';
-import Fade from '@material-ui/core/Fade';
-import FormatAlignCenterIcon from '@material-ui/icons/FormatAlignCenter';
-import FormatAlignRightIcon from '@material-ui/icons/FormatAlignRight';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import GetAppIcon from '@mui/icons-material/GetApp';
+import PhotoAlbumIcon from '@mui/icons-material/PhotoAlbum';
+import ImageIcon from '@mui/icons-material/Image';
+import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
+import FontDownloadIcon from '@mui/icons-material/FontDownload';
+import ShortTextIcon from '@mui/icons-material/ShortText';
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import PanoramaIcon from '@mui/icons-material/Panorama';
+import Fade from '@mui/material/Fade';
+import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
+import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
 import html2canvas from 'html2canvas';
 import { ArtPortfolioServer } from '../../src/Others/ArtPortfolioServer';
 import StackGrid from "react-stack-grid";
@@ -25,10 +25,10 @@ import { useSnackbar } from 'notistack';
 import { IPortfolio } from '../../interfaces/dataInterface';
 import { useRouter } from 'next/dist/client/router';
 // eslint-disable-next-line id-length
-import RadioButtonUncheckedRoundedIcon from '@material-ui/icons/RadioButtonUncheckedRounded';
-import LooksOneIcon from '@material-ui/icons/LooksOne';
-import LooksTwoIcon from '@material-ui/icons/LooksTwo';
-import Looks3Icon from '@material-ui/icons/Looks3';
+import RadioButtonUncheckedRoundedIcon from '@mui/icons-material/RadioButtonUncheckedRounded';
+import LooksOneIcon from '@mui/icons-material/LooksOne';
+import LooksTwoIcon from '@mui/icons-material/LooksTwo';
+import Looks3Icon from '@mui/icons-material/Looks3';
 import jsPDF from 'jspdf';
 
 

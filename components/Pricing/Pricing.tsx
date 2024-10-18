@@ -10,8 +10,8 @@
 
 // export default Pricing;
 import React, { useEffect, useState } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Theme } from "@material-ui/core";
+import { makeStyles } from '@mui/styles';
+import { Grid, Theme } from "@mui/material";
 import { useSnackbar } from 'notistack';
 import { useActions, useAppState } from '../../src/Overmind/OvermindHelper';
 import { ArtPortfolioServer } from '../../src/Others/ArtPortfolioServer';

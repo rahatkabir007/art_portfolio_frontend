@@ -1,11 +1,11 @@
 import React, { Dispatch } from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import { Fab, Grid, TextareaAutosize, TextField } from "@material-ui/core";
+import { makeStyles } from '@mui/styles';
+import { Fab, Grid, TextareaAutosize, TextField } from "@mui/material";
 import { useActions, useAppState } from '../../../src/Overmind/OvermindHelper';
 import styles from './EditPictureDetailsDialog.module.css';
-import Dialog from '@material-ui/core/Dialog';
+import Dialog from '@mui/material/Dialog';
 import { useForm } from 'react-hook-form';
-import DoneIcon from '@material-ui/icons/Done';
+import DoneIcon from '@mui/icons-material/Done';
 import { ArtPortfolioServer } from '../../../src/Others/ArtPortfolioServer';
 import { useSnackbar } from 'notistack';
 import { IUpdateImg } from '../../../interfaces/dataInterface';

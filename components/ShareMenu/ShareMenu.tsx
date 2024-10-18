@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { useAppState } from '../../src/Overmind/OvermindHelper';
 import styles from './ShareMenu.module.css';
-import FileCopyIcon from '@material-ui/icons/FileCopy';
+import FileCopyIcon from '@mui/icons-material/FileCopy';
 import { useSnackbar } from 'notistack';
 import {
     EmailShareButton,

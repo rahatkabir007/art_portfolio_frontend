@@ -1,6 +1,6 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import { CircularProgress, Dialog } from "@material-ui/core";
+import { makeStyles } from '@mui/styles';
+import { CircularProgress, Dialog } from "@mui/material";
 import { useAppState } from '../../src/Overmind/OvermindHelper';
 
 interface Props {

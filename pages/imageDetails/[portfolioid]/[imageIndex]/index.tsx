@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import styles from './styles.module.css';
-import EditIcon from '@material-ui/icons/Edit';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import EditIcon from '@mui/icons-material/Edit';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useRouter } from 'next/router';
 import { ArtPortfolioServer } from '../../../../src/Others/ArtPortfolioServer';
 import { useActions, useAppState } from '../../../../src/Overmind/OvermindHelper';
 import EditPictureDetailsDialog from '../../../../components/Helpers/EditPictureDetailsDialog/EditPictureDetailsDialog';
 import { useSnackbar } from 'notistack';
-import { Skeleton } from '@material-ui/lab';
+import { Skeleton } from "@mui/material";
 import { CookiesHandler } from '../../../../components/Helpers/CookiesHandler';
 
 

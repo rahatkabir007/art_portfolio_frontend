@@ -15,9 +15,9 @@ import Welcome from '../components/Welcome/Welcome';
 
 const index: React.FC = ({ }) => {
 
-    return <Grid >
+    return <div >
         <Welcome />
-    </Grid>
+    </div>
 }
 
 export default index;

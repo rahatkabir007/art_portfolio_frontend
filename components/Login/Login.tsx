@@ -91,15 +91,15 @@ const Login: React.FC<Props> = () => {
     //     }
     // }
 
-    return <Grid className={styles['loginContainer']} container >
-        <Grid className={styles['title']}>
+    return <div className={styles['loginContainer']} >
+        <div className={styles['title']}>
             <p>Art Portfolio</p>
-        </Grid>
-        <Grid className={styles['image']}>
+        </div>
+        <div className={styles['image']}>
             <picture>
                 <img style={{ backgroundColor: '#e3e3e3', borderRadius: '20px' }} src='images/artPortfolio.png' alt="" />
             </picture>
-        </Grid>
+        </div>
 
         <button className={styles['button']}
             onClick={handleGoogleLogin}>
@@ -117,13 +117,13 @@ const Login: React.FC<Props> = () => {
             <p> Login With Facebook</p>
         </button> */}
 
-        <Grid className={styles['privacy']}>
+        <div className={styles['privacy']}>
             {/* <p>By logging in, you agree to our terms <br /> and conditons and <span>Privacy Policy</span></p>
              */}
             {/* <p>This project is working on a Free Server as it is a Personal project. If you are logging in for the first time,</p>
             <p>Then Please login with Google and wait for one minute to start the server. Then Refresh and Login again! </p>
             <p>Thank You for your patience! 🧡</p> */}
-        </Grid>
+        </div>
 
         {/* <Grid className={styles['bottomNav']}>
             <Link href="/checkout">Pricing</Link>
@@ -131,7 +131,7 @@ const Login: React.FC<Props> = () => {
             <a href="">Something</a>
             <a href="">Something</a>
         </Grid> */}
-    </Grid>
+    </div>
 
 }
 

@@ -11,9 +11,9 @@ interface Props {
 const LoginPage: React.FC<Props> = () => {
 
 
-    return <Grid container>
+    return <div>
         <Login />
-    </Grid>
+    </div>
 
 }
 

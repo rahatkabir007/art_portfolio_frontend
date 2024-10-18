@@ -377,6 +377,7 @@ const EditPortfolioid: React.FC<Props> = () => {
                                                 <Grid className="portfolioTitle">
                                                     <label htmlFor='portfolioName'></label>
                                                     <TextField
+                                                        variant='standard'
                                                         name="portfolioName"
                                                         type="text"
                                                         value={values.portfolioName}

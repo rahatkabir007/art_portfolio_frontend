@@ -165,7 +165,7 @@ const EditPictureDetailsDialog: React.FC<Props> = (props) => {
                             {
                                 simplified ? <>
                                     <label>Main Title</label>
-                                    <TextField InputProps={{ disableUnderline: true, style: { color: "black", caretColor: states?.color } }}
+                                    <TextField variant='standard' InputProps={{ disableUnderline: true, style: { color: "black", caretColor: states?.color } }}
                                         defaultValue={states.userInfo?.mainTitle}
                                         inputProps={{
                                             maxLength: 25
@@ -182,7 +182,7 @@ const EditPictureDetailsDialog: React.FC<Props> = (props) => {
                                     :
                                     <>
                                         <label>Title</label>
-                                        <TextField InputProps={{ disableUnderline: true, style: { color: "black", caretColor: states?.color } }}
+                                        <TextField variant='standard' InputProps={{ disableUnderline: true, style: { color: "black", caretColor: states?.color } }}
                                             defaultValue={states.portfolioDetailsWithImages?.pictures[currentIndex]?.name}
                                             inputProps={{
                                                 maxLength: 25

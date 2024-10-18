@@ -17,6 +17,9 @@ a {
   clear: both;
 }
 
+fieldset{
+  border: none !important;
+}
 .MuiOutlinedInput-notchedOutline{
   border: none !important;
 }

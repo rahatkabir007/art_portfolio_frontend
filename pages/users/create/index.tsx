@@ -253,7 +253,7 @@ const Index: React.FC<Props> = () => {
                                     <Grid className={styles['containAll']}>
                                         <Grid className={styles['name']}>
                                             <label>Name</label>
-                                            <TextField InputProps={{ disableUnderline: true, style: { color: "black" } }}
+                                            <TextField variant='standard' InputProps={{ disableUnderline: true, style: { color: "black" } }}
                                                 inputProps={{
                                                     maxLength: 30
                                                 }}

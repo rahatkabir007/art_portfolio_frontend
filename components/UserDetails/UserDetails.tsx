@@ -130,6 +130,7 @@ const UserDetails: React.FC<Props> = ({ handleOnChange, setImgPath, data, logged
 
             <Grid className={styles['name']}>
                 <TextField
+                    variant='standard'
                     name="fullName"
                     type="text"
                     placeholder='YOUR ARTIST NAME'
@@ -157,6 +158,7 @@ const UserDetails: React.FC<Props> = ({ handleOnChange, setImgPath, data, logged
                     }}
                 />
                 <TextField
+                    variant='standard'
                     name="occupation"
                     type="text"
                     placeholder='Your Occupation'

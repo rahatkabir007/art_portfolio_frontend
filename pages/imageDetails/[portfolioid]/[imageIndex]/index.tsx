@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Grid } from "@mui/material";
+import { Grid, Skeleton } from "@mui/material";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import styles from './styles.module.css';
@@ -10,7 +10,6 @@ import { ArtPortfolioServer } from '../../../../src/Others/ArtPortfolioServer';
 import { useActions, useAppState } from '../../../../src/Overmind/OvermindHelper';
 import EditPictureDetailsDialog from '../../../../components/Helpers/EditPictureDetailsDialog/EditPictureDetailsDialog';
 import { useSnackbar } from 'notistack';
-import { Skeleton } from "@mui/material";
 import { CookiesHandler } from '../../../../components/Helpers/CookiesHandler';
 
 

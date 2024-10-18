@@ -3,8 +3,7 @@ import styles from './PortfolioMenu.module.css'
 import { useActions, useAppState } from '../../src/Overmind/OvermindHelper';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
-import { Skeleton } from "@mui/material";
-import { Grid, Radio } from '@mui/material';
+import { Grid, Radio, Skeleton } from '@mui/material';
 
 interface Props {
     handleClose?: (e: boolean) => void

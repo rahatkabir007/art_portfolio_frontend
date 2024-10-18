@@ -1,12 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { makeStyles } from '@mui/styles';
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Skeleton } from "@mui/material";
 import { useActions, useAppState } from '../../src/Overmind/OvermindHelper';
 import { motion } from "framer-motion";
 import styles from './styles.module.css';
 import AddIcon from '@mui/icons-material/Add';
 import Fab from '@mui/material/Fab';
-import { Skeleton } from "@mui/material";
 import { ArtPortfolioServer } from '../../src/Others/ArtPortfolioServer';
 import EditPictureDetailsDialog from '../../components/Helpers/EditPictureDetailsDialog/EditPictureDetailsDialog';
 import { useSwipeable } from 'react-swipeable';

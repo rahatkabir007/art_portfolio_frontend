@@ -91,11 +91,11 @@ const EditPortfolioid: React.FC<Props> = () => {
     // var addedPicturesUrl: Array<string> = [];
 
     useEffect(() => {
-        if (coverImage > states.coverImagesArray.length - 1) {
-            setCoverImage(states.coverImagesArray.length - 1)
+        const coverImageNumber = typeof coverImage === 'string' ? parseInt(coverImage, 10) : coverImage;
+        if (coverImageNumber > states.coverImagesArray.length - 1) {
+            setCoverImage(states.coverImagesArray.length - 1);
         }
-
-    }, [states.coverImagesArray, coverImage])
+    }, [states.coverImagesArray, coverImage]);
 
     useEffect(() => {
         if (!editportfolioDetails) {
@@ -583,12 +583,12 @@ const EditPortfolioid: React.FC<Props> = () => {
                     <Grid>
                         <Grid>
 
-                            <Skeleton variant="rect" style={{ marginTop: '5px', width: '20%', height: '40px' }} />
-                            <Skeleton variant="rect" style={{ marginTop: '25px', width: '50%', height: '40px' }} />
-                            <Skeleton variant="rect" style={{ marginTop: '25px', width: '100%', height: '60px' }} />
-                            <Skeleton variant="rect" style={{ marginTop: '25px', width: '100%', height: '80px' }} />
-                            <Skeleton variant="rect" style={{ marginTop: '25px', width: '100%', height: '60px' }} />
-                            <Skeleton variant="rect" style={{ marginTop: '25px', width: '100%', height: '250px' }} />
+                            <Skeleton variant="rectangular" style={{ marginTop: '5px', width: '20%', height: '40px' }} />
+                            <Skeleton variant="rectangular" style={{ marginTop: '25px', width: '50%', height: '40px' }} />
+                            <Skeleton variant="rectangular" style={{ marginTop: '25px', width: '100%', height: '60px' }} />
+                            <Skeleton variant="rectangular" style={{ marginTop: '25px', width: '100%', height: '80px' }} />
+                            <Skeleton variant="rectangular" style={{ marginTop: '25px', width: '100%', height: '60px' }} />
+                            <Skeleton variant="rectangular" style={{ marginTop: '25px', width: '100%', height: '250px' }} />
                         </Grid>
                     </Grid>
 

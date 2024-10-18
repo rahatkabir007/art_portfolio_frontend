@@ -259,17 +259,17 @@ function UserDetailsPage() {
           </Grid > :
           <Grid>
             <Skeleton variant="text" style={{ width: '50px', height: '50px', marginTop: '17px' }} />
-            <Skeleton variant="rect" style={{
+            <Skeleton variant="rectangular" style={{
               width: '100%', height: '359px',
               margin: '1rem 0 0',
               borderRadius: '10px'
             }} />
-            <Skeleton variant="rect" style={{
+            <Skeleton variant="rectangular" style={{
               width: '100%', height: '201px',
               margin: '1.5rem 0 0',
               borderRadius: '10px'
             }} />
-            <Skeleton variant="rect" style={{
+            <Skeleton variant="rectangular" style={{
               width: '100%', height: '260px',
               margin: '1.5rem 0rem 1rem ',
               borderRadius: '10px'

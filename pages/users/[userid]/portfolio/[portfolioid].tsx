@@ -706,10 +706,10 @@ const Portfolioid: React.FC<Props> = () => {
         :
         <Grid>
           <Grid>
-            <Skeleton variant="rect" style={{ marginTop: '5px', width: '25%', height: '40px' }} />
-            <Skeleton variant="rect" style={{ marginTop: '10px', width: '50%', height: '15vh' }} />
-            {/* <Skeleton variant="rect" style={{ marginTop: '5px', width: '60%', height: '4vh' }} /> */}
-            <Skeleton variant="rect" style={{ marginTop: '20px', width: '100%', height: '80vh' }} />
+            <Skeleton variant="rectangular" style={{ marginTop: '5px', width: '25%', height: '40px' }} />
+            <Skeleton variant="rectangular" style={{ marginTop: '10px', width: '50%', height: '15vh' }} />
+            {/* <Skeleton variant="rectangular" style={{ marginTop: '5px', width: '60%', height: '4vh' }} /> */}
+            <Skeleton variant="rectangular" style={{ marginTop: '20px', width: '100%', height: '80vh' }} />
           </Grid>
         </Grid>
       }

@@ -396,11 +396,11 @@ const Index: React.FC<Props> = () => {
                     >
                         <Grid>
                             <Grid style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                <Skeleton variant="rect" style={{ marginTop: '25px', width: '50%', height: '40px' }} />
-                                <Skeleton variant="circle" width={45} height={45} style={{ marginTop: '20px' }} />
+                                <Skeleton variant="rectangular" style={{ marginTop: '25px', width: '50%', height: '40px' }} />
+                                <Skeleton variant="circular" width={45} height={45} style={{ marginTop: '20px' }} />
                             </Grid>
-                            <Skeleton variant="rect" style={{ marginTop: '20px', width: '100%', height: '560px' }} />
-                            <Skeleton variant="circle" width={65} height={65} style={{ margin: 'auto', marginTop: '20px' }} />
+                            <Skeleton variant="rectangular" style={{ marginTop: '20px', width: '100%', height: '560px' }} />
+                            <Skeleton variant="circular" width={65} height={65} style={{ margin: 'auto', marginTop: '20px' }} />
                         </Grid>
                     </Grid>
             }

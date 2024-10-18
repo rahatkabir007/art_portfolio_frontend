@@ -371,7 +371,7 @@ const Index: React.FC<Props> = () => {
                     :
                     <Grid>
                         <Grid>
-                            <Skeleton variant="rect" style={{ width: '100%', height: '98vh' }} />
+                            <Skeleton variant="rectangular" style={{ width: '100%', height: '98vh' }} />
                         </Grid>
                     </Grid>
 

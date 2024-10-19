@@ -146,7 +146,7 @@ const EditPictureDetailsDialog: React.FC<Props> = (props) => {
     };
 
     return (
-        <Grid container >
+        <div>
             <Dialog
                 open={open}
                 onClose={handleClose}
@@ -200,7 +200,7 @@ const EditPictureDetailsDialog: React.FC<Props> = (props) => {
                         </div >
 
                         {
-                            !simplified && <Grid
+                            !simplified && <div
                                 className={styles['description']}
                             >
                                 <label>DESCRIPTION</label>
@@ -213,21 +213,21 @@ const EditPictureDetailsDialog: React.FC<Props> = (props) => {
                                     {...register('description')}
                                 />
                                 {/* {errors.description && <span className={styles.error}>{errors.description.message}</span>} */}
-                            </Grid>
+                            </div>
                         }
 
-                        <Grid style={{ display: 'flex', justifyContent: 'center', marginTop: simplified ? '35px' : '25px', marginBottom: simplified ? '35px' : '25px' }}>
-                            <Grid className={styles['favIcon']}>
+                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: simplified ? '35px' : '25px', marginBottom: simplified ? '35px' : '25px' }}>
+                            <div className={styles['favIcon']}>
                                 <Fab color="primary" type='submit' aria-label="add" classes={{ root: classes.avatarSize }}>
                                     <DoneIcon />
                                 </Fab>
-                            </Grid>
-                        </Grid>
+                            </div>
+                        </div>
 
                     </div >
                 </form >
             </Dialog >
-        </Grid >
+        </div >
     )
 
 

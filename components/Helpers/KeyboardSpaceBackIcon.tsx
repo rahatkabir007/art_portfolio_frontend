@@ -27,7 +27,7 @@ const KeyboardSpaceBackIcon: React.FC<Props> = (props) => {
         <>
             {simplified ?
                 // <Grid style={{ backgroundImage: `url(${back.src})`, backgroundColor: '', height: '100vh', width: '100vw', position: 'fixed' }}>
-                <Grid style={{ backgroundImage: `url('https://i.ibb.co/t8Yss5g/back.jpg')`, backgroundColor: '', height: '100vh', width: '100vw', position: 'fixed' }}>
+                <div style={{ backgroundImage: `url('https://i.ibb.co/t8Yss5g/back.jpg')`, backgroundColor: '', height: '100vh', width: '100vw', position: 'fixed' }}>
                     <KeyboardBackspaceIcon onClick={() => {
                         // if (userDetail && handleSubmit) {
                         //     console.log('go')
@@ -41,9 +41,9 @@ const KeyboardSpaceBackIcon: React.FC<Props> = (props) => {
 
                     }}
                         style={{ color: 'white', fontSize: '50px', zIndex: 1, position: 'fixed' }} />
-                </Grid >
+                </div >
                 :
-                <Grid style={{
+                <div style={{
                     backgroundColor: 'white', height: '50px', position: 'fixed', width: '100%', left: '0px', top: '0px', zIndex: 2
                 }}>
                     <KeyboardBackspaceIcon onClick={() => {
@@ -52,7 +52,7 @@ const KeyboardSpaceBackIcon: React.FC<Props> = (props) => {
                         sessionStorage.setItem(windowPathName, JSON.stringify(0))
                     }}
                         style={{ color: states?.color, fontSize: '50px', zIndex: 1 }} />
-                </Grid >
+                </div >
             }
         </>
     )

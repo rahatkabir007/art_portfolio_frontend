@@ -174,7 +174,7 @@ const Dropzone: React.FC<Props> = ({ files, filesUrl, setFiles, setFilesUrl, edi
                 {editportfolioDetails?.pictures?.map((item, index) => {
                     return (
                         !item.deleted && <SortableItem key={index}>
-                            <Grid className={styles["images"]}>
+                            <div className={styles["images"]}>
                                 <picture>
                                     <img style={{ backgroundColor: '#e3e3e3' }} src={item.url}
                                         className={styles["image"]} alt=""
@@ -220,7 +220,7 @@ const Dropzone: React.FC<Props> = ({ files, filesUrl, setFiles, setFilesUrl, edi
                                         className={styles["icon"]}
                                     />
                                 </div>
-                            </Grid>
+                            </div>
                         </SortableItem>
 
 

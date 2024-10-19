@@ -46,13 +46,13 @@ const DeleteMenu: React.FC<Props> = ({ afterDeletePosition, setDeleteDrawerOpen,
     };
 
     return (
-        <Grid className={styles['textSize']} style={{ display: 'flex', flexDirection: 'column', textAlign: 'center', fontSize: '25px', alignItems: 'center', marginTop: '80px' }}>
-            <Grid style={{ width: '65vw', fontFamily: 'Poppins', fontSize: '14px' }}>Are you sure that you want to delete this Portfolio?</Grid>
-            <Grid style={{ display: 'flex', flexDirection: 'row', marginTop: '30px', color: `${states?.color}`, fontFamily: 'Bebas Neue' }}>
-                <Grid style={{ margin: '0 10px', cursor: 'pointer' }} onClick={() => { handleCancel() }} >Cancel</Grid>
-                <Grid style={{ margin: '0 10px', cursor: 'pointer' }} onClick={() => { handleDelete() }}>Ok</Grid>
-            </Grid>
-        </Grid>
+        <div className={styles['textSize']} style={{ display: 'flex', flexDirection: 'column', textAlign: 'center', fontSize: '25px', alignItems: 'center', marginTop: '80px' }}>
+            <div style={{ width: '65vw', fontFamily: 'Poppins', fontSize: '14px' }}>Are you sure that you want to delete this Portfolio?</div>
+            <div style={{ display: 'flex', flexDirection: 'row', marginTop: '30px', color: `${states?.color}`, fontFamily: 'Bebas Neue' }}>
+                <div style={{ margin: '0 10px', cursor: 'pointer' }} onClick={() => { handleCancel() }} >Cancel</div>
+                <div style={{ margin: '0 10px', cursor: 'pointer' }} onClick={() => { handleDelete() }}>Ok</div>
+            </div>
+        </div>
     )
 
 }

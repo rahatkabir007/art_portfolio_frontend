@@ -20,7 +20,7 @@ const LongButton: React.FC<Props> = (props) => {
 
     // JSX
     return (
-        <Grid style={{
+        <div style={{
             backgroundColor: "#fff",
             borderRadius: "10px",
             boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
@@ -50,7 +50,7 @@ const LongButton: React.FC<Props> = (props) => {
                     path={props.path}
                 />
             </Grid>
-        </Grid>
+        </div>
     )
 
 }

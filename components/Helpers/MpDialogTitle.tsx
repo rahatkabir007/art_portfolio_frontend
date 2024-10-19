@@ -23,12 +23,16 @@ const MpDialogTitle: React.FC<Props> = (props) => {
     // JSX
     return (
         <DialogTitle style={dialogTitleStyle} >
-            <Grid container direction='row' justifyContent='space-between' alignItems='center'>
+            <div style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center"
+            }}>
                 <Typography variant='h6'>{props.children}</Typography>
                 <IconButton style={{ padding: 4 }} onClick={props.onCrossClick}>
                     <SvgIconRenderer path={SvgPaths.close} />
                 </IconButton>
-            </Grid>
+            </div>
         </DialogTitle>
     )
 

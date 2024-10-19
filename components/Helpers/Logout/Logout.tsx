@@ -28,13 +28,13 @@ const Logout: React.FC<Props> = () => {
         window.location.href = "/login"
     }
 
-    return <Grid className={styles['container']}>
+    return <div className={styles['container']}>
         <button className={styles['logoutBtn']}
             onClick={handleLogout}
         >
             Logout
         </button>
-    </Grid>
+    </div>
 
 }
 

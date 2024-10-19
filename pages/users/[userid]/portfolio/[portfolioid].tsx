@@ -326,10 +326,10 @@ const Portfolioid: React.FC<Props> = () => {
   }
 
   return (
-    <Grid >
+    <div>
       {portfolioDetails && portfolioDetails?.pictures?.length > 0 ?
         <motion.div>
-          <Grid
+          <div
             style={{
               position: 'absolute',
               left: 0,
@@ -339,7 +339,7 @@ const Portfolioid: React.FC<Props> = () => {
             }}
 
           >
-            <Grid onClick={() => {
+            <div onClick={() => {
               setDrawerOpen(false)
               // setShareDrawerOpen(false)  
               handleStyleDrawerClose(false)
@@ -349,32 +349,32 @@ const Portfolioid: React.FC<Props> = () => {
               }, 400)
             }}>
               <KeyboardSpaceBackIcon windowPathName={window.location.pathname} />
-              <Grid style={{ height: '100vh' }} id="hell">
-                <Grid className={styles['descContainer']}>
+              <div style={{ height: '100vh' }} id="hell">
+                <div className={styles['descContainer']}>
                   <Typography className={styles['portfolio_name']} style={{ color: states?.color, wordWrap: 'break-word', lineHeight: 1, marginBottom: '15px' }}>
                     {portfolioDetails.name}
                   </Typography>
-                  <Grid container className={styles['text']}>
+                  <div  className={styles['text']}>
                     <Typography>{portfolioDetails?.totalPictures}
                       {portfolioDetails?.pictures?.length > 1 ? ' photographs' : ' photograph'}
                       {portfolioDetails?.year === 'none' ? '' : <span style={{ marginBottom: '2px' }}> .{portfolioDetails?.year}</span>}
                     </Typography>
-                  </Grid>
+                  </div>
                   <Typography className={styles['description']} style={{ wordWrap: 'break-word', paddingBottom: '15px' }}>
                     {portfolioDetails?.description}
                   </Typography>
-                </Grid>
+                </div>
 
                 {states?.stylePortfolioNumber != 4 ?
-                  <Grid className=
+                  <div className=
                     {imageStyle()}
                   >
                     {portfolioDetails?.pictures?.map((item, index) => {
                       return (
-                        <Grid
+                        <div
                           key={item?._id}
                         >
-                          <Grid
+                          <div
                             className={styles['images']}
                             onClick={() => {
                               if (!drawerOpen) {
@@ -389,14 +389,14 @@ const Portfolioid: React.FC<Props> = () => {
                             {(states.stylePortfolioNumber == 1 || states.stylePortfolioNumber == 4) &&
                               <p className={item.name ? styles['imageText'] : styles['marg']}>{item.name}</p>
                             }
-                          </Grid>
+                          </div>
 
-                        </Grid>
+                        </div>
                       )
                     })
                     }
 
-                  </Grid>
+                  </div>
                   :
                   <StackGrid
                     columnWidth={"50%"}
@@ -408,7 +408,7 @@ const Portfolioid: React.FC<Props> = () => {
                   >
                     {portfolioDetails?.pictures?.map((item, index) => {
                       return (
-                        <Grid
+                        <div
                           key={item?._id}
                           className={styles['images']}
                           onClick={() => {
@@ -422,13 +422,13 @@ const Portfolioid: React.FC<Props> = () => {
                             <img src={item?.url} style={{ width: '100%' }} alt="l" />
                           </picture>
                           <p className={item.name ? styles['imageText'] : styles['marg']}>{item.name}</p>
-                        </Grid>
+                        </div>
                       )
                     })}
 
                   </StackGrid>
                 }
-                <Grid
+                <div
                   className=
                   {styles['loadMore']}
                 >
@@ -436,13 +436,13 @@ const Portfolioid: React.FC<Props> = () => {
                     onClick={loadMorePictures}
                     style={portfolioDetails?.pictures?.length == portfolioDetails?.totalPictures ? { display: 'none' } : { display: 'block' }}
                   >Load More</button>
-                </Grid>
+                </div>
 
-              </Grid>
-            </Grid>
+              </div>
+            </div>
             <div>
 
-              <Grid>
+              <div>
                 <Fab aria-label="add" classes={{ root: classes.avatarSize }}
                   onClick={() => {
                     setDrawerOpen(!drawerOpen)
@@ -464,10 +464,10 @@ const Portfolioid: React.FC<Props> = () => {
 
                 {
                   drawerOpen ?
-                    <Grid className={styles['animGrow']}>
-                      <Grid style={{ width: '100%', backgroundColor: states?.color ? states?.color : 'black', color: 'white', borderRadius: '20px' }}>
-                        <Grid className={drawerOpenVisibleHide()}>
-                          <Grid style={{ paddingTop: '20px', height: '380px', textAlign: 'left' }}>
+                    <div className={styles['animGrow']}>
+                      <div style={{ width: '100%', backgroundColor: states?.color ? states?.color : 'black', color: 'white', borderRadius: '20px' }}>
+                        <div className={drawerOpenVisibleHide()}>
+                          <div style={{ paddingTop: '20px', height: '380px', textAlign: 'left' }}>
                             <button onClick={() => {
                               sessionStorage.setItem(`/downloadPortfolio/${portfolioid}`, JSON.stringify(0))
                               router.push(`/downloadPortfolio/${portfolioid}`)
@@ -545,15 +545,15 @@ const Portfolioid: React.FC<Props> = () => {
                               ><FeedbackIcon style={IconStyle} /><p>Feedback</p>
                               </button>
                             </a>
-                          </Grid>
-                        </Grid >
-                      </Grid>
-                    </Grid>
+                          </div>
+                        </div >
+                      </div>
+                    </div>
                     :
-                    <Grid className={drawerOpenReload ? styles['anim'] : styles['displayDrawer']}>
-                      <Grid style={{ width: '100%', backgroundColor: states?.color ? states?.color : 'black', color: 'white', borderRadius: '20px' }}>
-                        <Grid className={drawerOpenVisibleHide()}>
-                          <Grid style={{ paddingTop: '20px', height: '380px', textAlign: 'left' }}>
+                    <div className={drawerOpenReload ? styles['anim'] : styles['displayDrawer']}>
+                      <div style={{ width: '100%', backgroundColor: states?.color ? states?.color : 'black', color: 'white', borderRadius: '20px' }}>
+                        <div className={drawerOpenVisibleHide()}>
+                          <div style={{ paddingTop: '20px', height: '380px', textAlign: 'left' }}>
                             <button onClick={() => {
                               sessionStorage.setItem(`/downloadPortfolio/${portfolioid}`, JSON.stringify(0))
                               router.push(`/downloadPortfolio/${portfolioid}`)
@@ -631,10 +631,10 @@ const Portfolioid: React.FC<Props> = () => {
                               ><FeedbackIcon style={IconStyle} /><p>Feedback</p>
                               </button>
                             </a>
-                          </Grid>
-                        </Grid >
-                      </Grid>
-                    </Grid>
+                          </div>
+                        </div >
+                      </div>
+                    </div>
                 }
                 {/* {
                   shareDrawerOpen ?
@@ -661,59 +661,59 @@ const Portfolioid: React.FC<Props> = () => {
                 } */}
                 {
                   styleDrawerOpen ?
-                    <Grid className={styles['anim2Grow']} >
-                      <Grid style={{ width: '100%', color: 'black', backgroundColor: 'white', borderRadius: '20px' }}>
-                        <Grid style={{ paddingTop: '20px', height: '380px' }}>
+                    <div className={styles['anim2Grow']} >
+                      <div style={{ width: '100%', color: 'black', backgroundColor: 'white', borderRadius: '20px' }}>
+                        <div style={{ paddingTop: '20px', height: '380px' }}>
                           <PortfolioMenu handleClose={handleClose}
                           />
-                        </Grid>
-                      </Grid >
-                    </Grid>
+                        </div>
+                      </div>
+                    </div>
                     :
-                    <Grid className={styleDrawerOpenReload ? styles['anim2'] : styles['displayDrawer']}>
-                      <Grid style={{ width: '100%', color: 'black', backgroundColor: 'white', borderRadius: '20px' }}>
-                        <Grid style={{ paddingTop: '20px', height: '380px' }}>
+                    <div className={styleDrawerOpenReload ? styles['anim2'] : styles['displayDrawer']}>
+                      <div style={{ width: '100%', color: 'black', backgroundColor: 'white', borderRadius: '20px' }}>
+                        <div style={{ paddingTop: '20px', height: '380px' }}>
                           <PortfolioMenu handleClose={handleClose} />
-                        </Grid>
-                      </Grid >
-                    </Grid>
+                        </div>
+                      </div>
+                    </div>
                 }
                 {
                   deleteDrawerOpen ?
-                    <Grid className={styles['anim2Grow']} >
-                      <Grid style={{ width: '100%', color: 'black', backgroundColor: 'white', borderRadius: '20px' }}>
-                        <Grid style={{ paddingTop: '20px', height: '380px' }}>
+                    <div className={styles['anim2Grow']} >
+                      <div style={{ width: '100%', color: 'black', backgroundColor: 'white', borderRadius: '20px' }}>
+                        <div style={{ paddingTop: '20px', height: '380px' }}>
                           <DeleteMenu afterDeletePosition={afterDeletePositionUserInfoSet} setDeleteDrawerOpen={setDeleteDrawerOpen} deleteDrawerOpen={deleteDrawerOpen} />
-                        </Grid>
-                      </Grid >
-                    </Grid>
+                        </div>
+                      </div >
+                    </div>
                     :
-                    <Grid className={deleteDrawerOpenReload ? styles['anim2'] : styles['displayDrawer']}>
-                      <Grid style={{ width: '100%', color: 'black', backgroundColor: 'white', borderRadius: '20px' }}>
-                        <Grid style={{ paddingTop: '20px', height: '380px' }}>
+                    <div className={deleteDrawerOpenReload ? styles['anim2'] : styles['displayDrawer']}>
+                      <div style={{ width: '100%', color: 'black', backgroundColor: 'white', borderRadius: '20px' }}>
+                        <div style={{ paddingTop: '20px', height: '380px' }}>
                           <DeleteMenu
                           />
-                        </Grid>
-                      </Grid >
-                    </Grid>
+                        </div>
+                      </div >
+                    </div>
                 }
-              </Grid>
+              </div>
 
-            </div >
-          </Grid>
-        </motion.div >
+            </div>
+          </div>
+        </motion.div>
         :
-        <Grid>
-          <Grid>
+        <div>
+          <div>
             <Skeleton variant="rectangular" style={{ marginTop: '5px', width: '25%', height: '40px' }} />
             <Skeleton variant="rectangular" style={{ marginTop: '10px', width: '50%', height: '15vh' }} />
             {/* <Skeleton variant="rectangular" style={{ marginTop: '5px', width: '60%', height: '4vh' }} /> */}
             <Skeleton variant="rectangular" style={{ marginTop: '20px', width: '100%', height: '80vh' }} />
-          </Grid>
-        </Grid>
+          </div>
+        </div>
       }
 
-    </Grid >
+    </div>
   );
 
 }

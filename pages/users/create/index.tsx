@@ -232,24 +232,24 @@ const Index: React.FC<Props> = () => {
     // JSX
 
     return (
-        <Grid>
+        <div>
             {
                 states.userInfo?.color ?
-                    <Grid>
+                    <div>
                         <Grid className={styles['sec']} classes={{ root: classes.section }}>
 
                         </Grid>
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            <Grid
+                            <div
                                 className={styles['container']}
                             >
-                                <Grid className={styles['content']}>
+                                <div className={styles['content']}>
                                     <Typography className={styles['portfolioText']}
 
                                     >Create<span style={{ display: 'block' }}>Portfolio</span> </Typography>
-                                </Grid >
-                                <Grid className={styles['container1']}>
-                                    <Grid className={styles['containAll']}>
+                                </div >
+                                <div className={styles['container1']}>
+                                    <div className={styles['containAll']}>
                                         <div className={styles['name']}>
                                             <label>Name</label>
                                             <TextField variant='standard' InputProps={{ disableUnderline: true, style: { color: "black" } }}
@@ -274,15 +274,15 @@ const Index: React.FC<Props> = () => {
                                             />
                                             {errors['description'] && <span className={styles['error']}>{errors['description'].message?.toString()}</span>}
                                         </div>
-                                        <Grid className={styles['yearContainer']}>
-                                            <Grid className={styles['year']}>
+                                        <div className={styles['yearContainer']}>
+                                            <div className={styles['year']}>
                                                 <label id={styles['year']}>YEAR</label>
-                                                <Grid className={styles['checkboxContainer']}>
+                                                <div className={styles['checkboxContainer']}>
                                                     <input type="checkbox" id="check" style={{ accentColor: states.userInfo?.color }} onClick={() => { handleCheckboxChange(!yearVisible as boolean) }} ref={noneRef} />
                                                     <label htmlFor='check' id={styles['none']}>None</label>
-                                                </Grid>
-                                            </Grid>
-                                            <Grid className={styles['yearInput']}>
+                                                </div>
+                                            </div>
+                                            <div className={styles['yearInput']}>
                                                 {
                                                     sliderYears.length > 0 && (
                                                         <Splide
@@ -326,8 +326,8 @@ const Index: React.FC<Props> = () => {
                                                     )
                                                 }
 
-                                            </Grid>
-                                        </Grid>
+                                            </div>
+                                        </div>
                                         <div className={styles['privacy']}>
                                             <label>Privacy</label>
                                             <RadioGroup
@@ -338,49 +338,49 @@ const Index: React.FC<Props> = () => {
                                                 <FormControlLabel  {...register("privacy")} value='private' control={<Radio style={{ color: `${states.userInfo.color}` }} />} label="Private" />
                                             </RadioGroup>
                                         </div>
-                                        <Grid className={styles['picture']}>
+                                        <div className={styles['picture']}>
                                             <label>picture</label>
 
                                             {files.length == 0 ? <> <p {...register('im', { required: 'At least one image required' })} />
                                                 {errors['im'] && <span className={styles['error']}>{errors['im'].message?.toString()}</span>}
                                             </> : ''}
-                                        </Grid>
-                                        <Grid className={styles['contain']}>
+                                        </div>
+                                        <div className={styles['contain']}>
                                             <DropzoneCreate
                                                 files={files}
                                                 setFiles={setFiles}
                                                 filesUrl={filesUrl}
                                                 setFilesUrl={setFilesUrl}
                                             />
-                                        </Grid>
-                                    </Grid>
-                                </Grid>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            </Grid>
+                            </div>
 
-                            <Grid className={styles['favIcon']}>
+                            <div className={styles['favIcon']}>
                                 <Fab color="primary" type='submit' aria-label="add" classes={{ root: classes.avatarSize }}>
                                     <DoneIcon />
                                 </Fab>
-                            </Grid>
+                            </div>
                         </form>
 
-                        <Grid className={styles['favIconDone']} onClick={() => { sessionStorage.setItem('/users/create', JSON.stringify(0)) }}>
+                        <div className={styles['favIconDone']} onClick={() => { sessionStorage.setItem('/users/create', JSON.stringify(0)) }}>
                             <Link href={`${states.userInfo.slug}`}>
                                 <ClearIcon style={{ fontSize: '30px', color: 'white' }} />
                             </Link>
                             {/* <Fab color="primary" aria-label="add" classes={{ root: classes.avatarSize }} onClick={() => router.push(`/users/${states.userInfo.slug}`)}><ClearIcon /></Fab> */}
-                        </Grid>
-                    </Grid >
+                        </div>
+                    </div >
                     :
-                    <Grid>
-                        <Grid>
+                    <div>
+                        <div>
                             <Skeleton variant="rectangular" style={{ width: '100%', height: '98vh' }} />
-                        </Grid>
-                    </Grid>
+                        </div>
+                    </div>
 
             }
-        </Grid >
+        </div >
     )
 
 }

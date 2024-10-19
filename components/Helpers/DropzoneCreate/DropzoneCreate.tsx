@@ -67,7 +67,7 @@ const DropzoneCreate: React.FC<Props> = ({ files, filesUrl, setFiles, setFilesUr
         return (
             <SortableItem
                 key={index}>
-                <Grid className={styles['images']} key={index}>
+                <div className={styles['images']} key={index}>
                     <picture>
                         <img
                             src={file}
@@ -83,7 +83,7 @@ const DropzoneCreate: React.FC<Props> = ({ files, filesUrl, setFiles, setFilesUr
                     }} >
                         <CloseIcon className={styles['closeIcon']} />
                     </div>
-                </Grid>
+                </div>
             </SortableItem>
         )
     });

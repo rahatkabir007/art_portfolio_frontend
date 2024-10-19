@@ -37,13 +37,13 @@ function UserAccent() {
   }
 
   return (
-    <Grid className={styles['container']}>
+    <div className={styles['container']}>
       <p style={{ color: states.userInfo?.color }}>Set Accent Color</p>
-      <Grid className={styles['colorSliderContainer']}>
+      <div className={styles['colorSliderContainer']}>
 
         {
           colors.map((item, index: number) => {
-            return <Grid key={item.color} className={styles['sliderBox']} style={{
+            return <div key={item.color} className={styles['sliderBox']} style={{
               height: isSelected(index) ? 120 : 100,
               backgroundColor: item.color
             }} onClick={() => {
@@ -52,8 +52,8 @@ function UserAccent() {
             }} />
           })
         }
-      </Grid>
-    </Grid>
+      </div>
+    </div>
   )
 }
 

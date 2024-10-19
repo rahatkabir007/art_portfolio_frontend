@@ -24,7 +24,7 @@ const MpDialogTitle: React.FC<Props> = (props) => {
     return (
         <DialogTitle style={dialogTitleStyle} >
             <div style={{
-                flexDirection: "row",
+                display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center"
             }}>

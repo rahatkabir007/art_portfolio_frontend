@@ -59,11 +59,11 @@ const PortfolioMenu: React.FC<Props> = (props) => {
         <>
             {
                 states?.color && handleClose ?
-                    <Grid
+                    <div
                         className={styles['allStylesContainer']}
                     // style={{ height: '322px', width: '100%', marginTop: '50px' }}
                     >
-                        <Grid className={styles['originalImagesContainer']}>
+                        <div className={styles['originalImagesContainer']}>
                             <Radio
                                 checked={states.stylePortfolioNumber == 1}
 
@@ -75,10 +75,10 @@ const PortfolioMenu: React.FC<Props> = (props) => {
 
                             />
                             <p>Original Images</p>
-                        </Grid>
+                        </div>
 
-                        <Grid className={styles['squareImagesWithColumnsContainer']} >
-                            <Grid className={styles['squareImagesContainer']}>
+                        <div className={styles['squareImagesWithColumnsContainer']} >
+                            <div className={styles['squareImagesContainer']}>
                                 <Radio
                                     checked={states.stylePortfolioNumber == 2 || states.stylePortfolioNumber == 3}
                                     onChange={handleChange}
@@ -89,15 +89,15 @@ const PortfolioMenu: React.FC<Props> = (props) => {
                                     inputProps={{ 'aria-label': 'B' }}
                                 />
                                 <p>Square Images</p>
-                            </Grid>
+                            </div>
 
-                            <Grid className={styles['numberContainer']}>
+                            <div className={styles['numberContainer']}>
                                 <p >Number of Columns</p>
-                            </Grid>
+                            </div>
 
                             {
                                 states.styleDrawer ?
-                                    <Grid className={styles['columnStyleContainer']} style={{ marginLeft: '0px' }}
+                                    <div className={styles['columnStyleContainer']} style={{ marginLeft: '0px' }}
                                     >
 
                                         <Splide
@@ -142,37 +142,37 @@ const PortfolioMenu: React.FC<Props> = (props) => {
                                             }
 
                                         </Splide>
-                                    </Grid>
+                                    </div>
                                     :
-                                    <Grid>
+                                    <div>
                                         {/* <Grid style={{ display: 'flex', flexDirection: 'row', width: '100px', textAlign: 'center', fontSize: '12.5px', alignItems: 'center', columnGap: '8px', paddingLeft: '8px', height: '38px' }}> */}
                                         {states.stylePortfolioNumber == 3 ?
                                             <>
-                                                <Grid style={{ width: '80%', margin: '10px auto' }}>
-                                                    <Grid style={{ display: 'flex', flexDirection: 'row', width: '100px', textAlign: 'center', fontSize: '12.5px', alignItems: 'center', columnGap: '8px', marginLeft: '-1px', height: '18px' }}>
+                                                <div style={{ width: '80%', margin: '10px auto' }}>
+                                                    <div style={{ display: 'flex', flexDirection: 'row', width: '100px', textAlign: 'center', fontSize: '12.5px', alignItems: 'center', columnGap: '8px', marginLeft: '-1px', height: '18px' }}>
                                                         <p style={{ width: '36.5px', color: 'grey', fontFamily: 'Poppins' }}>2</p>
                                                         <p style={{ width: '36.5px', color: `${states?.userInfo?.color}`, fontFamily: 'Poppins', fontWeight: 'bolder' }}>3</p>
-                                                    </Grid>
-                                                </Grid>
+                                                    </div>
+                                                </div>
                                             </> :
                                             <>
-                                                <Grid style={{ width: '80%', margin: '10px auto' }}>
-                                                    <Grid style={{ display: 'flex', flexDirection: 'row', width: '100px', textAlign: 'center', fontSize: '12.5px', alignItems: 'center', columnGap: '8px', marginLeft: '43.5px', height: '18px' }}>
+                                                <div style={{ width: '80%', margin: '10px auto' }}>
+                                                    <div style={{ display: 'flex', flexDirection: 'row', width: '100px', textAlign: 'center', fontSize: '12.5px', alignItems: 'center', columnGap: '8px', marginLeft: '43.5px', height: '18px' }}>
                                                         <p style={{ width: '36.5px', color: states.stylePortfolioNumber == 2 ? `${states?.userInfo?.color}` : 'grey', fontFamily: 'Poppins', fontWeight: states.stylePortfolioNumber == 2 ? 'bolder' : '' }}>2</p>
                                                         <p style={{ width: '36.5px', fontFamily: 'Poppins' }}>3</p>
-                                                    </Grid>
-                                                </Grid>
+                                                    </div>
+                                                </div>
                                             </>
                                         }
 
                                         {/* </Grid> */}
-                                    </Grid>
+                                    </div>
                             }
-                        </Grid>
+                        </div>
 
 
 
-                        <Grid className={styles['staggerdImageContainer']} style={{ marginTop: states.styleDrawer ? "0px" : "0px" }}>
+                        <div className={styles['staggerdImageContainer']} style={{ marginTop: states.styleDrawer ? "0px" : "0px" }}>
                             <Radio
                                 checked={states.stylePortfolioNumber == 4}
                                 onChange={handleChange}
@@ -183,19 +183,19 @@ const PortfolioMenu: React.FC<Props> = (props) => {
 
                             />
                             <p>Staggered Images</p>
-                        </Grid>
-                        <Grid>
-                            <Grid style={{ color: `${states?.color}`, marginTop: '15px', fontSize: '18px', fontFamily: 'sans-serif', fontWeight: 700, textAlign: 'center' }}
-                                onClick={() => { handleClose(false) }}>Cancel</Grid>
-                        </Grid>
+                        </div>
+                        <div>
+                            <div style={{ color: `${states?.color}`, marginTop: '15px', fontSize: '18px', fontFamily: 'sans-serif', fontWeight: 700, textAlign: 'center' }}
+                                onClick={() => { handleClose(false) }}>Cancel</div>
+                        </div>
 
-                    </Grid >
+                    </div >
                     :
-                    <Grid>
-                        <Grid>
+                    <div>
+                        <div>
                             <Skeleton variant="rectangular" style={{ width: '100%', height: '98vh' }} />
-                        </Grid>
-                    </Grid>
+                        </div>
+                    </div>
             }
         </>
         //     </Dialog>

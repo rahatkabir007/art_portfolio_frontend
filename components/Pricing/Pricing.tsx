@@ -139,13 +139,13 @@ const Pricing: React.FC<Props> = (props) => {
                     </Link>
                 </div>
             )}
-            <Grid>
+            <div>
                 <p>Price: {data.price}</p>
                 <button
                     type="button"
                     id="button"
                     style={{ marginTop: '2rem' }}
-                    onClick={() => onHandleCheckout()}
+                    onClick={onHandleCheckout}
                     disabled={loading}
                 >
                     {loading && (
@@ -156,7 +156,7 @@ const Pricing: React.FC<Props> = (props) => {
                     )}
                     {!loading && <span>Checkout</span>}
                 </button>
-            </Grid>
+            </div>
         </>
 
     )

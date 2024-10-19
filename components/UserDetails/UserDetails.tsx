@@ -111,24 +111,24 @@ const UserDetails: React.FC<Props> = ({ handleOnChange, setImgPath, data, logged
     //     document.querySelector(body).style.background = "#000";
     // }, [])
     return (
-        <Grid className={styles['container']}>
-            <Grid className={styles['imageContainer']}>
+        <div className={styles['container']}>
+            <div className={styles['imageContainer']}>
                 {/* <Grid>
                     <img src={data.user.profilePic} alt="" />
                 </Grid> */}
-                <Grid>
+                <div>
                     {thumbs()}
                     {/* {thumbs} */}
-                </Grid>
+                </div>
                 <Fab {...getRootProps({ className: 'dropzone' })} className={styles['icon']} style={userDetailsId !== loggedinSlug ? { visibility: 'hidden' } : { visibility: 'visible', background: states.userInfo?.color, color: 'white' }} aria-label="add" size="small">
                     <AddIcon style={{ fontSize: '28px' }} />
                     <input type="file" {...getInputProps()}
                         name="profilePic"
                     />
                 </Fab>
-            </Grid>
+            </div>
 
-            <Grid className={styles['name']}>
+            <div className={styles['name']}>
                 <TextField
                     variant='standard'
                     name="fullName"
@@ -179,20 +179,20 @@ const UserDetails: React.FC<Props> = ({ handleOnChange, setImgPath, data, logged
                         maxLength: 30
                     }}
                 />
-            </Grid>
-            <Grid className={styles['portfolioCount']}>
-                <Grid className={styles['portfolios']}>
+            </div>
+            <div className={styles['portfolioCount']}>
+                <div className={styles['portfolios']}>
                     <p className={styles['portfolioLength']}>{states.totalPortfolioNumber}</p>
                     <p className={styles['portfolio']}>Portfolios</p>
-                </Grid>
-                <Grid className={styles['pictures']}>
+                </div>
+                <div className={styles['pictures']}>
                     <p className={styles['portfolioImagesLength']}>{states.pictureNumber}</p>
                     <p className={styles['portfolioPictures']}>Pictures</p>
-                </Grid>
-            </Grid>
+                </div>
+            </div>
 
 
-        </Grid>
+        </div>
     )
 }
 

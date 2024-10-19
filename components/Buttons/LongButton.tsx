@@ -29,7 +29,10 @@ const LongButton: React.FC<Props> = (props) => {
         }}
             onClick={props.onClick}
         >
-            <Grid container direction='row' justifyContent='space-between'>
+            <div style={{
+                display: 'flex',
+                justifyContent: "space-between"
+            }}>
                 <p style={{
                     color: 'black',
                     fontFamily: '"Bebas Neue"',
@@ -49,7 +52,7 @@ const LongButton: React.FC<Props> = (props) => {
                     size={32}
                     path={props.path}
                 />
-            </Grid>
+            </div>
         </div>
     )
 

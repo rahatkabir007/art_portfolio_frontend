@@ -177,17 +177,17 @@ function UserDetailsPage() {
     <>
       {
         skeleton == false && states.userInfo?.avatar ?
-          <Grid >
-            <Grid style={{
+          <div>
+            <div style={{
               display: 'flex',
             }}>
               <KeyboardSpaceBackIcon simplified={true} windowPathName={window.location.pathname}
               // handleSubmit={handleSubmit} userDetail={true}
               />
-            </Grid>
+            </div>
             {/* {
               states.userInfo ? */}
-            <Grid style={{ position: 'relative', top: '45px', paddingBottom: '5px' }}>
+            <div style={{ position: 'relative', top: '45px', paddingBottom: '5px' }}>
               {/* <form onSubmit={handleSubmit} > */}
               <UserDetails handleOnChange={handleOnChange} setImgPath={setImgPath} data={data} loggedinSlug={loggedinSlug} userDetailsId={userDetailsId} />
               <UserAccent />
@@ -251,12 +251,12 @@ function UserDetailsPage() {
                   }}>
                     <Logout />
                   </Grid> */}
-            </Grid>
+            </div>
             {/* : <><p>Loading</p> </>
             } */}
 
-          </Grid > :
-          <Grid>
+          </div > :
+          <div>
             <Skeleton variant="text" style={{ width: '50px', height: '50px', marginTop: '17px' }} />
             <Skeleton variant="rectangular" style={{
               width: '100%', height: '359px',
@@ -273,7 +273,7 @@ function UserDetailsPage() {
               margin: '1.5rem 0rem 1rem ',
               borderRadius: '10px'
             }} />
-          </Grid>
+          </div>
       }
     </>
   )

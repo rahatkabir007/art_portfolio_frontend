@@ -97,9 +97,9 @@ const SlideShowPortfolioid: React.FC<Props> = () => {
                 className={styles['container']}
             >
 
-                <Grid>
+                <div>
 
-                    <Grid className={styles['bg']}
+                    <div className={styles['bg']}
                         onClick={() => {
                             setDrawerOpen(!drawerOpen)
                             setDrawerOpenReload(false)
@@ -157,26 +157,26 @@ const SlideShowPortfolioid: React.FC<Props> = () => {
 
                         </Splide>
 
-                    </Grid >
+                    </div >
 
-                </Grid >
+                </div >
 
 
 
                 {
                     drawerOpen ?
 
-                        < Grid className={styles['topDrawerGrow']}>
-                            <Grid>
+                        <div className={styles['topDrawerGrow']}>
+                            <div>
                                 <ArrowBackIcon style={{ fontSize: '40px', paddingLeft: '16px', marginTop: '16px' }} onClick={() => { router.back(); }} />
-                            </Grid>
-                        </Grid>
+                            </div>
+                        </div>
                         :
-                        < Grid className={drawerOpenReload ? styles['topDrawer'] : styles['topDrawerSqueeze']}>
-                            <Grid>
+                        <div className={drawerOpenReload ? styles['topDrawer'] : styles['topDrawerSqueeze']}>
+                            <div>
                                 <ArrowBackIcon style={{ fontSize: '40px', paddingLeft: '16px', marginTop: '16px' }} />
-                            </Grid>
-                        </Grid>
+                            </div>
+                        </div>
 
                 }
 
@@ -184,19 +184,19 @@ const SlideShowPortfolioid: React.FC<Props> = () => {
 
                 {drawerOpen ?
 
-                    <Grid className={styles['rightDrawerGrow']}>
-                        <Grid className={styles['iconContainer']}>
+                    <div className={styles['rightDrawerGrow']}>
+                        <div className={styles['iconContainer']}>
                             <div onClick={() => { handleRepeat() }}><RepeatIcon style={repeat ? { fontSize: '40px', cursor: 'pointer' } : { fontSize: '40px', cursor: 'pointer', color: 'grey' }} /></div>
                             <p>Repeat</p>
-                        </Grid>
+                        </div>
 
 
 
-                        <Grid className={styles['iconContainer']}>
+                        <div className={styles['iconContainer']}>
                             <div onClick={handleInfo}><InfoIcon style={info ? { fontSize: '40px', cursor: 'pointer' } : { fontSize: '40px', cursor: 'pointer', color: 'grey' }} /></div>
                             <p>Info</p>
-                        </Grid>
-                        <Grid className={`${styles['iconContainer']} ${styles['transitionContainer']}`}>
+                        </div>
+                        <div className={`${styles['iconContainer']} ${styles['transitionContainer']}`}>
                             <Splide
                                 options={{
                                     perPage: 3,
@@ -233,21 +233,21 @@ const SlideShowPortfolioid: React.FC<Props> = () => {
                             <div >
                                 <p>Transition Time</p>
                             </div>
-                        </Grid>
+                        </div>
 
-                    </Grid>
+                    </div>
                     :
-                    <Grid className={drawerOpenReload ? styles['rightDrawer'] : styles['rightDrawerSqueeze']}>
-                        <Grid className={styles['iconContainer']}>
+                    <div className={drawerOpenReload ? styles['rightDrawer'] : styles['rightDrawerSqueeze']}>
+                        <div className={styles['iconContainer']}>
                             <RepeatIcon style={{ fontSize: '40px' }} />
                             <p>Repeat</p>
-                        </Grid>
+                        </div>
 
-                        <Grid className={styles['iconContainer']}>
+                        <div className={styles['iconContainer']}>
                             <InfoIcon style={{ fontSize: '40px' }} />
                             <p>Info</p>
-                        </Grid>
-                        <Grid className={`${styles['iconContainer']} ${styles['transitionContainer']}`}>
+                        </div>
+                        <div className={`${styles['iconContainer']} ${styles['transitionContainer']}`}>
                             <Splide
                                 options={{
                                     perPage: 3,
@@ -281,8 +281,8 @@ const SlideShowPortfolioid: React.FC<Props> = () => {
                             <div >
                                 <p>Transition Time</p>
                             </div>
-                        </Grid>
-                    </Grid>
+                        </div>
+                    </div>
 
                 }
             </div>

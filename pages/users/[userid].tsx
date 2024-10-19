@@ -246,12 +246,12 @@ const Index: React.FC<Props> = () => {
             {
                 !skeleton && states.userInfo?.avatar ?
                     <>
-                        <Grid
+                        <div
                         // style={{ height: '97vh' }}
 
                         >
-                            <Grid className={styles['topContent']}>
-                                <Grid>
+                            <div className={styles['topContent']}>
+                                <div>
                                     {
                                         states.userInfo?.slug !== loggedinSlug ? <button
                                             className={styles['textFont']} style={{ border: 'none', textAlign: 'left', background: 'none', color: states?.userInfo?.color, whiteSpace: 'nowrap', width: '70vw', overflow: 'hidden', textOverflow: 'ellipsis' }}>{states.userInfo?.mainTitle}
@@ -261,9 +261,9 @@ const Index: React.FC<Props> = () => {
                                                 className={styles['textFont']} style={{ border: 'none', textAlign: 'left', background: 'none', color: states?.userInfo?.color, whiteSpace: 'nowrap', width: '70vw', overflow: 'hidden', textOverflow: 'ellipsis' }}>{states.userInfo?.mainTitle}
                                             </button>
                                     }
-                                </Grid>
+                                </div>
 
-                                <Grid onClick={() => { onClickLocalStorageSet() }}>
+                                <div onClick={() => { onClickLocalStorageSet() }}>
                                     {/* <Avatar className={styles.avatar} src={states?.userInfo?.avatar?states?.userInfo?.avatar:''} classes={{ root: classes.profileAvatarSize }}
                                             onClick={() => { localStorage.setItem('beforeGoingUserDetailsWhichPosition', position + 1) }}
                                         /> */}
@@ -297,9 +297,9 @@ const Index: React.FC<Props> = () => {
                                         alt=""
                                     /> */}
 
-                                </Grid>
+                                </div>
 
-                            </Grid>
+                            </div>
 
                             {/* {
                             dataAllPortfolio?.length == 0 ? actions.positionSet(0) : ''
@@ -331,7 +331,7 @@ const Index: React.FC<Props> = () => {
                                                     // }}
                                                     >
 
-                                                        <Grid style={{
+                                                        <div style={{
                                                             position: 'relative', height: '100%', width: '100%'
 
                                                         }}
@@ -350,13 +350,13 @@ const Index: React.FC<Props> = () => {
                                                                         }}
                                                                     />
                                                                 </picture>
-                                                                <Grid className={styles['textImage']}>
+                                                                <div className={styles['textImage']}>
                                                                     <Typography style={{ fontFamily: 'Bebas Neue', fontWeight: 500, fontSize: '40px', height: '45px', whiteSpace: 'nowrap', width: '60vw', overflow: 'hidden', textOverflow: 'ellipsis' }}>{dataP.name}</Typography>
                                                                     <Typography style={{ paddingBottom: '10px' }}>{dataP.totalPictures} {dataP?.totalPictures && dataP.totalPictures > 1 ? `photographs` : 'photograph'} {dataP.year === 'none' ? "" : `. ${dataP.year}`}</Typography>
                                                                     <Typography style={{ whiteSpace: 'nowrap', width: '60vw', overflow: 'hidden', textOverflow: 'ellipsis' }} >{dataP.description}</Typography>
-                                                                </Grid>
+                                                                </div>
                                                             </div>
-                                                        </Grid>
+                                                        </div>
                                                         {/* </Link> */}
                                                     </motion.div>
 
@@ -368,7 +368,7 @@ const Index: React.FC<Props> = () => {
                                     </div>
                             }
                             {
-                                states.userInfo?.slug === loggedinSlug && <Grid className={styles['favIcon']}
+                                states.userInfo?.slug === loggedinSlug && <div className={styles['favIcon']}
                                     onClick={() => {
                                         router.push("/users/create")
                                         localStorage.setItem('beforeGoingCreateWhichPosition', JSON.stringify(position + 1))
@@ -378,7 +378,7 @@ const Index: React.FC<Props> = () => {
                                     <Fab aria-label="add" classes={{ root: classes.avatarSize }} >
                                         <AddIcon />
                                     </Fab>
-                                </Grid>
+                                </div>
                             }
 
                             {/* <button
@@ -387,21 +387,21 @@ const Index: React.FC<Props> = () => {
                             {
                                 dataAllPortfolio?.length === 0 && <svg style={{ overflow: 'hidden' }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill={states.userInfo.color} d="M0,32L30,74.7C60,117,120,203,180,224C240,245,300,203,360,165.3C420,128,480,96,540,112C600,128,660,192,720,186.7C780,181,840,107,900,106.7C960,107,1020,181,1080,181.3C1140,181,1200,107,1260,74.7C1320,43,1380,53,1410,58.7L1440,64L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
                             }
-                        </Grid>
+                        </div>
                     </>
                     :
-                    <Grid
+                    <div
 
                     >
-                        <Grid>
-                            <Grid style={{ display: 'flex', justifyContent: 'space-between' }}>
+                        <div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                                 <Skeleton variant="rectangular" style={{ marginTop: '25px', width: '50%', height: '40px' }} />
                                 <Skeleton variant="circular" width={45} height={45} style={{ marginTop: '20px' }} />
-                            </Grid>
+                            </div>
                             <Skeleton variant="rectangular" style={{ marginTop: '20px', width: '100%', height: '560px' }} />
                             <Skeleton variant="circular" width={65} height={65} style={{ margin: 'auto', marginTop: '20px' }} />
-                        </Grid>
-                    </Grid>
+                        </div>
+                    </div>
             }
         </motion.div >
     );

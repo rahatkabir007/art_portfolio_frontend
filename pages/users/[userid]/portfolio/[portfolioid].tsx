@@ -2,7 +2,7 @@
 import React, {
   useEffect, useState
 } from 'react';
-import { Fab, Grid, Typography, Skeleton } from "@mui/material";
+import { Fab, Typography, Skeleton } from "@mui/material";
 import { useActions, useAppState } from '../../../../src/Overmind/OvermindHelper';
 import { useRouter } from 'next/router';
 import styles from "./portfolioid.module.css";
@@ -354,7 +354,7 @@ const Portfolioid: React.FC<Props> = () => {
                   <Typography className={styles['portfolio_name']} style={{ color: states?.color, wordWrap: 'break-word', lineHeight: 1, marginBottom: '15px' }}>
                     {portfolioDetails.name}
                   </Typography>
-                  <div  className={styles['text']}>
+                  <div className={styles['text']}>
                     <Typography>{portfolioDetails?.totalPictures}
                       {portfolioDetails?.pictures?.length > 1 ? ' photographs' : ' photograph'}
                       {portfolioDetails?.year === 'none' ? '' : <span style={{ marginBottom: '2px' }}> .{portfolioDetails?.year}</span>}

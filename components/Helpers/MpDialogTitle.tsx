@@ -1,5 +1,5 @@
 import React, { MouseEventHandler } from 'react'
-import { DialogTitle, Grid, IconButton, Typography } from "@mui/material";
+import { DialogTitle, IconButton, Typography } from "@mui/material";
 import { SvgPaths } from '../../src/Others/SvgPaths';
 import SvgIconRenderer from './SvgIconRenderer';
 import { AppColors } from '../../src/Others/AppColors';

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Grid, Skeleton } from "@mui/material";
+import { Skeleton } from "@mui/material";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import styles from './styles.module.css';

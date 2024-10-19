@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Grid, Skeleton } from '@mui/material';
+import { Skeleton } from '@mui/material';
 import UserAccent from '../../components/UserAccent/UserAccent';
 import UserFaq from '../../components/UserFaq/UserFaq';
 // import Logout from '../components/Helpers/Logout/Logout';

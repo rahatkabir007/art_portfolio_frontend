@@ -1,7 +1,5 @@
 import React, { MouseEventHandler } from 'react'
-import { Grid } from "@mui/material";
 import SvgIconRenderer from '../Helpers/SvgIconRenderer';
-import { useActions, useAppState } from '../../src/Overmind/OvermindHelper';
 
 interface Props {
     title: string,

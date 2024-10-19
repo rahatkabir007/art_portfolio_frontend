@@ -1,5 +1,4 @@
 import React, { RefObject, useEffect, useRef, useState } from 'react'
-import { Grid } from "@mui/material";
 import styles from './slideShowPortfolio.module.css';
 import { useActions } from '../../src/Overmind/OvermindHelper';
 import { useRouter } from 'next/router';

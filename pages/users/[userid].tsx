@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { makeStyles } from '@mui/styles';
-import { Grid, Typography, Skeleton } from "@mui/material";
+import { Typography, Skeleton } from "@mui/material";
 import { useActions, useAppState } from '../../src/Overmind/OvermindHelper';
 import { motion } from "framer-motion";
 import styles from './styles.module.css';

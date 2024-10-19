@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import React, { useEffect, useState } from 'react'
 import { makeStyles } from '@mui/styles';
-import { Dialog, Fab, Grid, Menu, MenuItem } from "@mui/material";
+import { Dialog, Fab, Menu, MenuItem } from "@mui/material";
 import { useActions, useAppState } from '../../src/Overmind/OvermindHelper';
 import styles from './downloadPortfolio.module.css';
 import Link from 'next/link';

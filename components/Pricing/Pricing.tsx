@@ -1,20 +1,5 @@
-// import React from 'react';
-
-// const Pricing = () => {
-//     return (
-//         <div>
-
-//         </div>
-//     );
-// };
-
 // export default Pricing;
 import React, { useEffect, useState } from 'react'
-import { makeStyles } from '@mui/styles';
-import { Grid, Theme } from "@mui/material";
-import { useSnackbar } from 'notistack';
-import { useActions, useAppState } from '../../src/Overmind/OvermindHelper';
-import { ArtPortfolioServer } from '../../src/Others/ArtPortfolioServer';
 import Link from 'next/link';
 import axios from 'axios';
 
@@ -22,23 +7,9 @@ interface Props {
 
 }
 
-const getThemeObj = (theme: Theme) => {
-    return {
-        //
-    }
-}
-
-const useStyles = makeStyles((theme: Theme) => (getThemeObj(theme)))
-
 const Pricing: React.FC<Props> = (props) => {
-    const actions = useActions()
-    const states = useAppState()
-
-    const classes = useStyles();
 
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState('');
-    const { enqueueSnackbar, closeSnackbar } = useSnackbar();
 
     // const { location } = props;
     const [response, setResponse] = useState('');

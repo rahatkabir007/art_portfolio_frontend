@@ -9,9 +9,9 @@ interface Props {
 
 
 const checkout: React.FC<Props> = () => {
-    return <Grid>
+    return <div>
         <Pricing />
-    </Grid>
+    </div>
 
 }
 

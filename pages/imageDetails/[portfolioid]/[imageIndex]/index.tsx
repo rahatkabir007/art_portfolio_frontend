@@ -122,17 +122,17 @@ const Index: React.FC<Props> = () => {
     // JSX
 
     return (
-        <Grid>
+        <div>
             {states.portfolioDetailsWithImages ? (
-                <Grid>
+                <div>
                     <EditPictureDetailsDialog
                         open={open}
                         setOpen={setOpen}
                         currentIndex={currentIndex}
                     />
 
-                    <Grid>
-                        <Grid className={styles['bg']} onClick={() => {
+                    <div>
+                        <div className={styles['bg']} onClick={() => {
                             setDrawerOpen(!drawerOpen)
                             setDrawerOpenReload(false)
                             setDnr2(!dnr2)
@@ -186,74 +186,74 @@ const Index: React.FC<Props> = () => {
                                     })
                                 }
                             </Splide>
-                        </Grid>
+                        </div>
 
-                    </Grid>
+                    </div>
 
                     {drawerOpen ?
 
-                        < Grid className={drawerOpenReload ? styles['topDrawer'] : styles['topDrawerGrow']}>
-                            <Grid>
+                        <div className={drawerOpenReload ? styles['topDrawer'] : styles['topDrawerGrow']}>
+                            <div>
                                 <ArrowBackIcon style={{ fontSize: '40px', paddingLeft: '5px', paddingTop: '4px' }} onClick={() => { router.back() }} />
-                            </Grid>
+                            </div>
                             {
-                                states.portfolioDetailsWithImages?.userSlug !== loggedinSlug ? '' : <Grid>
+                                states.portfolioDetailsWithImages?.userSlug !== loggedinSlug ? '' : <div>
                                     <EditIcon style={{ fontSize: '35px', color: 'white', paddingRight: '8px', paddingTop: '6px' }} onClick={handleClickOpen} />
-                                </Grid>
+                                </div>
                             }
 
-                        </Grid>
+                        </div>
                         :
-                        < Grid className={styles['topDrawerSqueeze']}>
-                            <Grid>
+                        <div className={styles['topDrawerSqueeze']}>
+                            <div>
                                 <ArrowBackIcon style={{ fontSize: '40px', paddingLeft: '5px', paddingTop: '4px' }} />
-                            </Grid>
+                            </div>
                             {
-                                states.portfolioDetailsWithImages?.userSlug !== loggedinSlug ? '' : <Grid>
+                                states.portfolioDetailsWithImages?.userSlug !== loggedinSlug ? '' : <div>
                                     <EditIcon style={{ fontSize: '35px', color: 'white', paddingRight: '8px', paddingTop: '6px' }} onClick={handleClickOpen} />
-                                </Grid>
+                                </div>
                             }
-                        </Grid>
+                        </div>
 
                     }
                     {drawerOpen ?
 
                         // < Grid className={drawerOpenReload ? styles.downDrawer : styles.downDrawerGrow}>
-                        < Grid className={getBottomStyle()} onClick={() => {
+                        <div className={getBottomStyle()} onClick={() => {
                             setswipeDrawerOpen(!swipeDrawerOpen)
                             setDnr(true)
                             setDnr3(!dnr3)
                         }} >
-                            <Grid style={{ width: '4vw', margin: 'auto', textAlign: 'center', borderRadius: '10px', height: '5px', backgroundColor: 'white', marginTop: '15px' }}>
-                            </Grid>
-                            <Grid style={{ display: 'flex', flexDirection: 'column', fontFamily: 'Bebas Neue', color: 'white', textTransform: 'uppercase', marginLeft: '3vw' }}>
+                            <div style={{ width: '4vw', margin: 'auto', textAlign: 'center', borderRadius: '10px', height: '5px', backgroundColor: 'white', marginTop: '15px' }}>
+                            </div>
+                            <div style={{ display: 'flex', flexDirection: 'column', fontFamily: 'Bebas Neue', color: 'white', textTransform: 'uppercase', marginLeft: '3vw' }}>
                                 {/* <Grid className={title ?`${styles.animate_animated} ${styles.animate_flipInX}`:''}> */}
-                                <Grid className={title ? "animate__animated animate__flipInX" : ''}>
-                                    <Grid style={{ fontSize: '40px', marginTop: '5px', whiteSpace: 'nowrap', width: '95vw', overflow: 'hidden', textOverflow: 'ellipsis' }}>{states.portfolioDetailsWithImages.pictures[currentIndex]?.name ? states.portfolioDetailsWithImages.pictures[currentIndex]?.name : 'NO TITLE'}</Grid>
-                                </Grid>
-                                <Grid style={{ fontSize: '16px', whiteSpace: 'nowrap', width: '95vw', overflow: 'hidden', textOverflow: 'ellipsis' }}>{states.portfolioDetailsWithImages.pictures[currentIndex]?.description ? states.portfolioDetailsWithImages.pictures[currentIndex]?.description : ''}</Grid>
-                            </Grid>
-                        </Grid>
+                                <div className={title ? "animate__animated animate__flipInX" : ''}>
+                                    <div style={{ fontSize: '40px', marginTop: '5px', whiteSpace: 'nowrap', width: '95vw', overflow: 'hidden', textOverflow: 'ellipsis' }}>{states.portfolioDetailsWithImages.pictures[currentIndex]?.name ? states.portfolioDetailsWithImages.pictures[currentIndex]?.name : 'NO TITLE'}</div>
+                                </div>
+                                <div style={{ fontSize: '16px', whiteSpace: 'nowrap', width: '95vw', overflow: 'hidden', textOverflow: 'ellipsis' }}>{states.portfolioDetailsWithImages.pictures[currentIndex]?.description ? states.portfolioDetailsWithImages.pictures[currentIndex]?.description : ''}</div>
+                            </div>
+                        </div>
                         :
 
-                        <Grid className={styles['downDrawerSqueeze']} >
-                            <Grid style={{ width: '4vw', margin: 'auto', textAlign: 'center', borderRadius: '10px', height: '5px', backgroundColor: 'white', marginTop: '15px' }}>
-                            </Grid>
-                            <Grid style={{ display: 'flex', flexDirection: 'column', fontFamily: 'Bebas Neue', color: 'white', textTransform: 'uppercase', marginLeft: '3vw' }}>
-                                <Grid style={{ fontSize: '40px', marginTop: '5px', whiteSpace: 'nowrap', width: '95vw', overflow: 'hidden', textOverflow: 'ellipsis' }}>{states.portfolioDetailsWithImages.pictures[currentIndex]?.name ? states.portfolioDetailsWithImages.pictures[currentIndex]?.name : 'NO TITLE'}</Grid>
-                                <Grid style={{ fontSize: '16px', whiteSpace: 'nowrap', width: '95vw', overflow: 'hidden', textOverflow: 'ellipsis' }}>{states.portfolioDetailsWithImages.pictures[currentIndex]?.description ? states.portfolioDetailsWithImages.pictures[currentIndex]?.description : ''}</Grid>
-                            </Grid>
-                        </Grid>
+                        <div className={styles['downDrawerSqueeze']} >
+                            <div style={{ width: '4vw', margin: 'auto', textAlign: 'center', borderRadius: '10px', height: '5px', backgroundColor: 'white', marginTop: '15px' }}>
+                            </div>
+                            <div style={{ display: 'flex', flexDirection: 'column', fontFamily: 'Bebas Neue', color: 'white', textTransform: 'uppercase', marginLeft: '3vw' }}>
+                                <div style={{ fontSize: '40px', marginTop: '5px', whiteSpace: 'nowrap', width: '95vw', overflow: 'hidden', textOverflow: 'ellipsis' }}>{states.portfolioDetailsWithImages.pictures[currentIndex]?.name ? states.portfolioDetailsWithImages.pictures[currentIndex]?.name : 'NO TITLE'}</div>
+                                <div style={{ fontSize: '16px', whiteSpace: 'nowrap', width: '95vw', overflow: 'hidden', textOverflow: 'ellipsis' }}>{states.portfolioDetailsWithImages.pictures[currentIndex]?.description ? states.portfolioDetailsWithImages.pictures[currentIndex]?.description : ''}</div>
+                            </div>
+                        </div>
                     }
 
-                </Grid>
+                </div>
             ) :
 
-                <Grid>
+                <div>
                     <Skeleton variant="rectangular" style={{ marginTop: '5px', width: '100vw', height: '100%' }} />
-                </Grid>
+                </div>
             }
-        </Grid>
+        </div>
     )
 
 }

@@ -390,9 +390,9 @@ const DownloadPorfolioid: React.FC<Props> = () => {
     // JSX
 
     return (
-        <Grid>
+        <div>
             {singlePortfolioDetails && singlePortfolioDetails?.pictures?.length > 0 && (
-                <Grid >
+                <div>
                     <Menu
                         id="fade-menu"
                         anchorEl={anchorAlignCoverTitle}
@@ -561,115 +561,115 @@ const DownloadPorfolioid: React.FC<Props> = () => {
                         aria-describedby="alert-dialog-description"
                         classes={{ paper: classes.paper }}
                     >
-                        <Grid className={styles['title']}>
-                            <Grid style={{ display: 'flex', flexDirection: 'row', margin: '30px auto', cursor: 'pointer' }} onClick={() => { generatePdfFromImages() }}>
-                                <Grid style={{ marginTop: '2px' }}><PictureAsPdfIcon /></Grid>
-                                <Grid style={{ paddingLeft: '10px' }}>DOWNLOAD AS PDF (BETA)</Grid>
-                            </Grid>
-                            <Grid style={{ display: 'flex', flexDirection: 'row', margin: '30px auto', cursor: 'pointer' }} onClick={() => { generateIMG() }}>
-                                <Grid style={{ marginTop: '2px' }}><PanoramaIcon /> </Grid>
-                                <Grid style={{ paddingLeft: '10px' }}>DOWNLOAD AS IMAGE</Grid>
-                            </Grid>
-                        </Grid>
+                        <div className={styles['title']}>
+                            <div style={{ display: 'flex', flexDirection: 'row', margin: '30px auto', cursor: 'pointer' }} onClick={() => { generatePdfFromImages() }}>
+                                <div style={{ marginTop: '2px' }}><PictureAsPdfIcon /></div>
+                                <div style={{ paddingLeft: '10px' }}>DOWNLOAD AS PDF (BETA)</div>
+                            </div>
+                            <div style={{ display: 'flex', flexDirection: 'row', margin: '30px auto', cursor: 'pointer' }} onClick={() => { generateIMG() }}>
+                                <div style={{ marginTop: '2px' }}><PanoramaIcon /> </div>
+                                <div style={{ paddingLeft: '10px' }}>DOWNLOAD AS IMAGE</div>
+                            </div>
+                        </div>
                     </Dialog>
 
 
-                    <Grid style={{
+                    <div style={{
                         position: 'absolute', width: '100vw', backgroundColor: 'rgb(169 172 173)', right: '0px',
                         bottom: '0px',
                         top: '0px',
                         left: '0px'
                     }}>
-                        <Grid style={{ backgroundColor: 'white', margin: 'auto', width: '95vw' }}>
+                        <div style={{ backgroundColor: 'white', margin: 'auto', width: '95vw' }}>
                             <Fab aria-label="add" classes={{ root: classes.avatarSize }} onClick={() => { router.back() }}
                             >
                                 <ArrowBackIcon style={{ fontSize: '40px' }} />
                             </Fab>
-                            <Grid className={styles['scrollDiv']} id="scrollToTopC">
-                                <Grid style={{ padding: '0px 3vw 35px' }} id="content">
+                            <div className={styles['scrollDiv']} id="scrollToTopC">
+                                <div style={{ padding: '0px 3vw 35px' }} id="content">
                                     {showCover ?
-                                        <Grid className={styles['showAnim']}>
-                                            <Grid style={{ margin: 'auto', position: 'relative', color: `${states?.color}` }} >
+                                        <div className={styles['showAnim']}>
+                                            <div style={{ margin: 'auto', position: 'relative', color: `${states?.color}` }} >
                                                 <picture>
                                                     <img style={{ backgroundColor: '#e3e3e3' }} src={singlePortfolioDetails?.pictures[coverImageNumber - 1]?.url} className={showCoverImage ? styles['image'] : styles['imageHide']} alt="" />
                                                 </picture>
 
-                                                <Grid className={styles['leftCoverImagePortfolioName']}>
-                                                    <Grid style={leftAlignCoverTitle ? { fontFamily: 'Bebas Neue', whiteSpace: 'nowrap', width: '70vw', overflow: 'hidden', textOverflow: 'ellipsis' } : { display: 'none' }}>{singlePortfolioDetails.name}</Grid>
-                                                </Grid>
-                                                <Grid className={styles['leftCoverImageOwnerName']}>
-                                                    <Grid className={leftAlignOwnerName ? styles['ownerName'] : styles['ownerNameHide']}>by <span>{states.userInfo?.fullName}</span></Grid>
-                                                </Grid>
+                                                <div className={styles['leftCoverImagePortfolioName']}>
+                                                    <div style={leftAlignCoverTitle ? { fontFamily: 'Bebas Neue', whiteSpace: 'nowrap', width: '70vw', overflow: 'hidden', textOverflow: 'ellipsis' } : { display: 'none' }}>{singlePortfolioDetails.name}</div>
+                                                </div>
+                                                <div className={styles['leftCoverImageOwnerName']}>
+                                                    <div className={leftAlignOwnerName ? styles['ownerName'] : styles['ownerNameHide']}>by <span>{states.userInfo?.fullName}</span></div>
+                                                </div>
 
-                                                <Grid className={styles['centerCoverImagePortfolioName']}>
-                                                    <Grid style={centerAlignCoverTitle ? { fontFamily: 'Bebas Neue', whiteSpace: 'nowrap', width: '75vw', overflow: 'hidden', textOverflow: 'ellipsis', textAlign: 'center' } : { display: 'none' }}>{singlePortfolioDetails.name}</Grid>
-                                                </Grid>
-                                                <Grid className={styles['centerCoverImageOwnerName']}>
-                                                    <Grid className={centerAlignOwnerName ? styles['ownerName'] : styles['ownerNameHide']}>by <span>{states.userInfo?.fullName}</span></Grid>
-                                                </Grid>
+                                                <div className={styles['centerCoverImagePortfolioName']}>
+                                                    <div style={centerAlignCoverTitle ? { fontFamily: 'Bebas Neue', whiteSpace: 'nowrap', width: '75vw', overflow: 'hidden', textOverflow: 'ellipsis', textAlign: 'center' } : { display: 'none' }}>{singlePortfolioDetails.name}</div>
+                                                </div>
+                                                <div className={styles['centerCoverImageOwnerName']}>
+                                                    <div className={centerAlignOwnerName ? styles['ownerName'] : styles['ownerNameHide']}>by <span>{states.userInfo?.fullName}</span></div>
+                                                </div>
 
-                                                <Grid className={styles['rightCoverImagePortfolioName']}>
-                                                    <Grid style={rightAlignCoverTitle ? { fontFamily: 'Bebas Neue', whiteSpace: 'nowrap', width: '70vw', overflow: 'hidden', textOverflow: 'ellipsis', textAlign: 'right' } : { display: 'none' }}>{singlePortfolioDetails.name}</Grid>
-                                                </Grid>
-                                                <Grid className={styles['rightCoverImageOwnerName']}>
-                                                    <Grid className={rightAlignOwnerName ? styles['ownerName'] : styles['ownerNameHide']}>by <span>{states.userInfo?.fullName}</span></Grid>
-                                                </Grid>
-                                            </Grid>
-                                        </Grid>
+                                                <div className={styles['rightCoverImagePortfolioName']}>
+                                                    <div style={rightAlignCoverTitle ? { fontFamily: 'Bebas Neue', whiteSpace: 'nowrap', width: '70vw', overflow: 'hidden', textOverflow: 'ellipsis', textAlign: 'right' } : { display: 'none' }}>{singlePortfolioDetails.name}</div>
+                                                </div>
+                                                <div className={styles['rightCoverImageOwnerName']}>
+                                                    <div className={rightAlignOwnerName ? styles['ownerName'] : styles['ownerNameHide']}>by <span>{states.userInfo?.fullName}</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         :
-                                        <Grid className={styles['hiddenAnim']}>
-                                            <Grid style={{ margin: 'auto', position: 'relative', color: `${states?.color}` }} >
+                                        <div className={styles['hiddenAnim']}>
+                                            <div style={{ margin: 'auto', position: 'relative', color: `${states?.color}` }} >
                                                 <picture>
                                                     <img style={{ backgroundColor: '#e3e3e3' }} src={singlePortfolioDetails?.pictures[coverImageNumber - 1]?.url} className={showCoverImage ? styles['image'] : styles['imageHide']} alt="" />
                                                 </picture>
-                                                <Grid className={styles['leftCoverImagePortfolioName']}>
-                                                    <Grid style={leftAlignCoverTitle ? { fontFamily: 'Bebas Neue' } : { display: 'none' }}>{singlePortfolioDetails.name}</Grid>
-                                                </Grid>
-                                                <Grid className={styles['leftCoverImageOwnerName']}>
-                                                    <Grid className={leftAlignOwnerName ? styles['ownerName'] : styles['ownerNameHide']}>by <span>{states.userInfo?.fullName}</span></Grid>
-                                                </Grid>
+                                                <div className={styles['leftCoverImagePortfolioName']}>
+                                                    <div style={leftAlignCoverTitle ? { fontFamily: 'Bebas Neue' } : { display: 'none' }}>{singlePortfolioDetails.name}</div>
+                                                </div>
+                                                <div className={styles['leftCoverImageOwnerName']}>
+                                                    <div className={leftAlignOwnerName ? styles['ownerName'] : styles['ownerNameHide']}>by <span>{states.userInfo?.fullName}</span></div>
+                                                </div>
 
-                                                <Grid className={styles['centerCoverImagePortfolioName']}>
-                                                    <Grid style={centerAlignCoverTitle ? { fontFamily: 'Bebas Neue' } : { display: 'none' }}>{singlePortfolioDetails.name}</Grid>
-                                                </Grid>
-                                                <Grid className={styles['centerCoverImageOwnerName']}>
-                                                    <Grid className={centerAlignOwnerName ? styles['ownerName'] : styles['ownerNameHide']}>by <span>{states.userInfo?.fullName}</span></Grid>
-                                                </Grid>
+                                                <div className={styles['centerCoverImagePortfolioName']}>
+                                                    <div style={centerAlignCoverTitle ? { fontFamily: 'Bebas Neue' } : { display: 'none' }}>{singlePortfolioDetails.name}</div>
+                                                </div>
+                                                <div className={styles['centerCoverImageOwnerName']}>
+                                                    <div className={centerAlignOwnerName ? styles['ownerName'] : styles['ownerNameHide']}>by <span>{states.userInfo?.fullName}</span></div>
+                                                </div>
 
-                                                <Grid className={styles['rightCoverImagePortfolioName']}>
-                                                    <Grid style={rightAlignCoverTitle ? { fontFamily: 'Bebas Neue' } : { display: 'none' }}>{singlePortfolioDetails.name}</Grid>
-                                                </Grid>
-                                                <Grid className={styles['rightCoverImageOwnerName']}>
-                                                    <Grid className={rightAlignOwnerName ? styles['ownerName'] : styles['ownerNameHide']}>by <span>{states.userInfo?.fullName}</span></Grid>
-                                                </Grid>
-                                            </Grid>
-                                        </Grid>
+                                                <div className={styles['rightCoverImagePortfolioName']}>
+                                                    <div style={rightAlignCoverTitle ? { fontFamily: 'Bebas Neue' } : { display: 'none' }}>{singlePortfolioDetails.name}</div>
+                                                </div>
+                                                <div className={styles['rightCoverImageOwnerName']}>
+                                                    <div className={rightAlignOwnerName ? styles['ownerName'] : styles['ownerNameHide']}>by <span>{states.userInfo?.fullName}</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     }
 
-                                    <Grid className={styles['scroll']} id="scrollToTopG">
+                                    <div className={styles['scroll']} id="scrollToTopG">
                                         {showPortfolioName ?
-                                            <Grid className={styles['showAnim']}>
-                                                <Grid className={styles['portfolioName']} style={{ color: `${states?.color}`, wordBreak: 'break-word', height: 'auto' }}>{singlePortfolioDetails.name}</Grid>
-                                            </Grid>
+                                            <div className={styles['showAnim']}>
+                                                <div className={styles['portfolioName']} style={{ color: `${states?.color}`, wordBreak: 'break-word', height: 'auto' }}>{singlePortfolioDetails.name}</div>
+                                            </div>
                                             :
-                                            <Grid className={styles['hiddenAnim']}>
-                                                <Grid className={styles['portfolioName']} style={{ color: `${states?.color}`, wordBreak: 'break-word', height: 'auto' }}>{singlePortfolioDetails.name}</Grid>
-                                            </Grid>
+                                            <div className={styles['hiddenAnim']}>
+                                                <div className={styles['portfolioName']} style={{ color: `${states?.color}`, wordBreak: 'break-word', height: 'auto' }}>{singlePortfolioDetails.name}</div>
+                                            </div>
                                         }
                                         {showPortfolioDetails ?
-                                            <Grid className={styles['showAnim']}>
-                                                <Grid className={styles['pictureNumber']}>{singlePortfolioDetails?.pictures?.length} {singlePortfolioDetails?.pictures?.length > 1 ? 'photographs' : 'photograph'}{singlePortfolioDetails?.year === 'none' ? '' : <span style={{ marginBottom: '2px' }}> .{singlePortfolioDetails?.year}</span>}</Grid>
-                                            </Grid>
-                                            : <Grid className={styles['hiddenAnim']}>
-                                                <Grid className={styles['pictureNumber']}>{singlePortfolioDetails?.pictures?.length} {singlePortfolioDetails?.pictures?.length > 1 ? 'photographs' : 'photograph'}{singlePortfolioDetails?.year === 'none' ? '' : <span style={{ marginBottom: '2px' }}> .{singlePortfolioDetails?.year}</span>}</Grid>
-                                            </Grid>
+                                            <div className={styles['showAnim']}>
+                                                <div className={styles['pictureNumber']}>{singlePortfolioDetails?.pictures?.length} {singlePortfolioDetails?.pictures?.length > 1 ? 'photographs' : 'photograph'}{singlePortfolioDetails?.year === 'none' ? '' : <span style={{ marginBottom: '2px' }}> .{singlePortfolioDetails?.year}</span>}</div>
+                                            </div>
+                                            : <div className={styles['hiddenAnim']}>
+                                                <div className={styles['pictureNumber']}>{singlePortfolioDetails?.pictures?.length} {singlePortfolioDetails?.pictures?.length > 1 ? 'photographs' : 'photograph'}{singlePortfolioDetails?.year === 'none' ? '' : <span style={{ marginBottom: '2px' }}> .{singlePortfolioDetails?.year}</span>}</div>
+                                            </div>
                                         }
-                                        <Grid className={styles['portfolioDescription']} style={{ wordWrap: 'break-word' }}>{singlePortfolioDetails.description}</Grid>
+                                        <div className={styles['portfolioDescription']} style={{ wordWrap: 'break-word' }}>{singlePortfolioDetails.description}</div>
                                         {twoSquareSize || threeSquareSize || oneOriginalSize ?
-                                            <Grid className={imageStyle()}>
+                                            <div className={imageStyle()}>
                                                 {singlePortfolioDetails?.pictures?.map((item, index) => {
                                                     return (
-                                                        <Grid
+                                                        <div
                                                             onClick={() => {
                                                                 router.push(`/imageDetails/${downloadPorfolioid}/${index}`)
                                                                 localStorage.setItem('picture index', JSON.stringify(index))
@@ -683,13 +683,13 @@ const DownloadPorfolioid: React.FC<Props> = () => {
                                                                 <p className={styles['imageText']}>{item.name}</p>
                                                             }
 
-                                                        </Grid>
+                                                        </div>
                                                     )
 
                                                 })}
-                                            </Grid>
+                                            </div>
                                             :
-                                            <Grid>
+                                            <div>
                                                 <StackGrid
                                                     columnWidth={"50%"}
                                                     duration={0}
@@ -700,7 +700,7 @@ const DownloadPorfolioid: React.FC<Props> = () => {
                                                 >
                                                     {singlePortfolioDetails?.pictures?.map((item, index) => {
                                                         return (
-                                                            <Grid
+                                                            <div
                                                                 className={styles['images']}
                                                                 onClick={() => {
                                                                     router.push(`/imageDetails/${downloadPorfolioid}/${index}`)
@@ -713,75 +713,75 @@ const DownloadPorfolioid: React.FC<Props> = () => {
                                                                 </picture>
                                                                 <p className={item.name ? styles['imageText'] : styles['marg']}>{item.name}</p>
 
-                                                            </Grid>
+                                                            </div>
                                                         )
                                                     })
                                                     }
 
                                                 </StackGrid>
-                                            </Grid>
+                                            </div>
                                         }
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Grid>
-                    </Grid>
-                    <Grid  >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
                         {drawerOpen ?
-                            <Grid className={styles['drawerFullContainerOpen']} style={{ backgroundColor: `${states?.color}`, left: '0px', zIndex: 2 }}>
+                            <div className={styles['drawerFullContainerOpen']} style={{ backgroundColor: `${states?.color}`, left: '0px', zIndex: 2 }}>
                                 <Fab aria-label="add" classes={{ root: classes.avatarSize2 }} onClick={() => { handleClickOpenDownloadDialog() }} >
                                     <GetAppIcon style={{ fontSize: '40px' }} />
                                 </Fab>
-                                <Grid style={{ height: '40px' }} onClick={() => {
+                                <div style={{ height: '40px' }} onClick={() => {
                                     setDrawerOpen(!drawerOpen)
                                     setDrawerOpenReload(true)
                                 }}>
-                                </Grid>
-                                <Grid style={{ color: 'white' }}>
-                                    <Grid style={{ paddingLeft: '5vw', display: 'flex' }}>
-                                        <Grid className={showCoverStyle ? styles['drawer'] : ''} onClick={() => {
+                                </div>
+                                <div style={{ color: 'white' }}>
+                                    <div style={{ paddingLeft: '5vw', display: 'flex' }}>
+                                        <div className={showCoverStyle ? styles['drawer'] : ''} onClick={() => {
                                             setTimeout(() => { scrollLeftCG() }, 100)
                                             setTimeout(() => { scrollTopC() }, 150)
                                             setShowCoverStyle(true)
                                             setDrawerOpen(true)
                                         }}>
                                             <p className={styles['drawerTitle']} >COVER STYLE</p>
-                                        </Grid>
-                                        <Grid className={showCoverStyle ? '' : styles['drawer']} onClick={() => {
+                                        </div>
+                                        <div className={showCoverStyle ? '' : styles['drawer']} onClick={() => {
                                             setTimeout(() => { scrollLeftCG() }, 100)
                                             setTimeout(() => { scrollTopG() }, 150)
                                             setShowCoverStyle(false)
                                             setDrawerOpen(true)
                                         }}>
                                             <p className={styles['drawerTitle']} >GENERAL STYLE</p>
-                                        </Grid>
-                                    </Grid>
+                                        </div>
+                                    </div>
                                     {
                                         showCoverStyle ?
-                                            <Grid className={styles['drawerDivParent']} id="scrollToX">
-                                                <Grid className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: showCover ? 'brightness(125%)' : '' }} onClick={() => {
+                                            <div className={styles['drawerDivParent']} id="scrollToX">
+                                                <div className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: showCover ? 'brightness(125%)' : '' }} onClick={() => {
                                                     scrollTopC()
                                                     setShowCover(!showCover)
                                                 }}>
-                                                    <Grid style={{ color: showCover ? '' : 'darkGray' }}>
+                                                    <div style={{ color: showCover ? '' : 'darkGray' }}>
                                                         <PhotoAlbumIcon style={{ fontSize: '40px' }} />
                                                         <p className={styles['iconTextWidth']}>Show cover</p>
-                                                    </Grid>
-                                                </Grid>
-                                                <Grid className={showCover ? styles['drawerDiv'] : styles['drawerDivHide']} style={{ backgroundColor: `${states?.color}`, filter: showCoverImage ? 'brightness(125%)' : '' }} onClick={() => {
+                                                    </div>
+                                                </div>
+                                                <div className={showCover ? styles['drawerDiv'] : styles['drawerDivHide']} style={{ backgroundColor: `${states?.color}`, filter: showCoverImage ? 'brightness(125%)' : '' }} onClick={() => {
                                                     scrollTopC()
                                                     setShowCoverImage(!showCoverImage)
                                                 }}>
-                                                    <Grid style={{ color: showCoverImage ? '' : 'darkGray' }}>
+                                                    <div style={{ color: showCoverImage ? '' : 'darkGray' }}>
                                                         <ImageIcon style={{ fontSize: '40px' }} />
                                                         <p className={styles['iconTextWidth']}>Show cover image</p>
-                                                    </Grid>
-                                                </Grid>
-                                                <Grid className={showCover ? styles['drawerDiv'] : styles['drawerDivHide']} aria-controls="fade-menu" aria-haspopup="true" style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }} onClick={(e) => {
+                                                    </div>
+                                                </div>
+                                                <div className={showCover ? styles['drawerDiv'] : styles['drawerDivHide']} aria-controls="fade-menu" aria-haspopup="true" style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }} onClick={(e) => {
                                                     scrollTopC()
                                                     hndleClkShwAlignCovTitleMenu(e)
                                                 }}>
-                                                    <Grid>
+                                                    <div>
                                                         {centerAlignCoverTitle ?
                                                             <FormatAlignCenterIcon style={{ fontSize: '40px' }} />
                                                             : rightAlignCoverTitle ?
@@ -790,8 +790,8 @@ const DownloadPorfolioid: React.FC<Props> = () => {
                                                                 <FormatAlignLeftIcon style={{ fontSize: '40px' }} />
                                                         }
                                                         <p className={styles['iconText']}>Align cover title</p>
-                                                    </Grid>
-                                                </Grid>
+                                                    </div>
+                                                </div>
                                                 {/* <Grid className={showCover ? styles['drawerDiv'] : styles['drawerDivHide']} style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }} onClick={(e) => {
                                                     scrollTopC()
                                                     handleClickShowArtistName(e)
@@ -801,11 +801,11 @@ const DownloadPorfolioid: React.FC<Props> = () => {
                                                         <p className={styles['iconText']}>Show my name</p>
                                                     </Grid>
                                                 </Grid> */}
-                                                <Grid className={showCover ? styles['drawerDiv'] : styles['drawerDivHide']} aria-controls="fade-menu" aria-haspopup="true" style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }} onClick={(e) => {
+                                                <div className={showCover ? styles['drawerDiv'] : styles['drawerDivHide']} aria-controls="fade-menu" aria-haspopup="true" style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }} onClick={(e) => {
                                                     scrollTopC()
                                                     handleClickShowAlignOwnerName(e)
                                                 }}>
-                                                    <Grid>
+                                                    <div>
                                                         {centerAlignOwnerName ?
                                                             <FormatAlignCenterIcon style={{ fontSize: '40px' }} />
                                                             : rightAlignOwnerName ?
@@ -814,39 +814,39 @@ const DownloadPorfolioid: React.FC<Props> = () => {
                                                                 <FormatAlignLeftIcon style={{ fontSize: '40px' }} />
                                                         }
                                                         <p className={styles['iconText']}>Align my name</p>
-                                                    </Grid>
-                                                </Grid>
-                                            </Grid>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             :
-                                            <Grid className={styles['drawerDivParent']} id="scrollToX">
+                                            <div className={styles['drawerDivParent']} id="scrollToX">
                                                 <Link href={`/userDetails/${singlePortfolioDetails?.userSlug}`} style={{ textDecoration: 'none' }}>
-                                                    <Grid className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }}>
-                                                        <Grid style={{ color: 'white' }}>
+                                                    <div className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }}>
+                                                        <div style={{ color: 'white' }}>
                                                             <RadioButtonUncheckedRoundedIcon style={{ fontSize: '60px', color: 'white' }} />
                                                             <p className={styles['iconTextWidth']}>Accent color</p>
-                                                        </Grid>
-                                                    </Grid>
+                                                        </div>
+                                                    </div>
                                                 </Link>
-                                                <Grid className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: showPortfolioName ? 'brightness(125%)' : '' }} onClick={() => {
+                                                <div className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: showPortfolioName ? 'brightness(125%)' : '' }} onClick={() => {
                                                     scrollTopG()
                                                     setShowPortfolioName(!showPortfolioName)
                                                 }}>
-                                                    <Grid style={{ color: showPortfolioName ? '' : 'darkGray' }}>
+                                                    <div style={{ color: showPortfolioName ? '' : 'darkGray' }}>
                                                         <FontDownloadIcon style={{ fontSize: '40px' }} />
                                                         <p className={styles['iconTextWidth']}>Show portfolio name</p>
-                                                    </Grid>
-                                                </Grid>
-                                                <Grid className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: showPortfolioDetails ? 'brightness(125%)' : '' }} onClick={() => {
+                                                    </div>
+                                                </div>
+                                                <div className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: showPortfolioDetails ? 'brightness(125%)' : '' }} onClick={() => {
                                                     scrollTopG()
                                                     setShowPortfolioDetails(!showPortfolioDetails)
                                                 }}>
-                                                    <Grid style={{ color: showPortfolioDetails ? '' : 'darkGray' }}>
+                                                    <div style={{ color: showPortfolioDetails ? '' : 'darkGray' }}>
                                                         <ShortTextIcon style={{ fontSize: '40px' }} />
                                                         <p className={styles['iconTextWidth']}>Show portfolio details</p>
-                                                    </Grid>
-                                                </Grid>
-                                                <Grid className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }} onClick={(e) => { handleClickShowNumberColums(e) }}>
-                                                    <Grid>
+                                                    </div>
+                                                </div>
+                                                <div className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }} onClick={(e) => { handleClickShowNumberColums(e) }}>
+                                                    <div>
                                                         {
                                                             oneOriginalSize ?
                                                                 <LooksOneIcon style={{ fontSize: '40px' }} /> :
@@ -855,69 +855,69 @@ const DownloadPorfolioid: React.FC<Props> = () => {
                                                                     <Looks3Icon style={{ fontSize: '40px' }} />
                                                         }
                                                         <p className={styles['iconTextWidth']}>Number of columns</p>
-                                                    </Grid>
-                                                </Grid>
+                                                    </div>
+                                                </div>
 
-                                            </Grid>
+                                            </div>
 
                                     }
-                                </Grid>
+                                </div>
 
-                            </Grid>
+                            </div>
                             :
-                            <Grid className={drawerOpenReload ? styles['drawerFullContainerClose'] : styles['displayDrawer']} style={{ backgroundColor: `${states?.color}`, left: '0px', zIndex: 2 }} >
+                            <div className={drawerOpenReload ? styles['drawerFullContainerClose'] : styles['displayDrawer']} style={{ backgroundColor: `${states?.color}`, left: '0px', zIndex: 2 }} >
                                 <Fab aria-label="add" classes={{ root: classes.avatarSize2 }} onClick={() => { handleClickOpenDownloadDialog() }} >
                                     <GetAppIcon style={{ fontSize: '40px' }} />
                                 </Fab>
-                                <Grid style={{ height: '40px' }} onClick={() => {
+                                <div style={{ height: '40px' }} onClick={() => {
                                     setDrawerOpen(!drawerOpen)
                                     setDrawerOpenReload(true)
                                 }}>
 
-                                </Grid>
-                                <Grid style={{ color: 'white' }}>
-                                    <Grid style={{ paddingLeft: '5vw', display: 'flex' }}>
-                                        <Grid className={showCoverStyle ? styles['drawer'] : ''} onClick={() => {
+                                </div>
+                                <div style={{ color: 'white' }}>
+                                    <div style={{ paddingLeft: '5vw', display: 'flex' }}>
+                                        <div className={showCoverStyle ? styles['drawer'] : ''} onClick={() => {
                                             scrollTopC()
                                             setShowCoverStyle(true)
                                             setDrawerOpen(true)
                                         }}>
                                             <p className={styles['drawerTitle']} >COVER STYLE</p>
-                                        </Grid>
-                                        <Grid className={showCoverStyle ? '' : styles['drawer']} onClick={() => {
+                                        </div>
+                                        <div className={showCoverStyle ? '' : styles['drawer']} onClick={() => {
                                             scrollTopG()
                                             setShowCoverStyle(false)
                                             setDrawerOpen(true)
                                         }}>
                                             <p className={styles['drawerTitle']} > GENERAL STYLE</p>
-                                        </Grid>
-                                    </Grid>
+                                        </div>
+                                    </div>
                                     {
                                         showCoverStyle ?
-                                            <Grid className={styles['drawerDivParent']}>
-                                                <Grid className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: showCover ? 'brightness(125%)' : '' }} onClick={() => {
+                                            <div className={styles['drawerDivParent']}>
+                                                <div className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: showCover ? 'brightness(125%)' : '' }} onClick={() => {
                                                     scrollTopC()
                                                     setShowCover(!showCover)
                                                 }}>
-                                                    <Grid style={{ color: showCover ? '' : 'darkGray' }}>
+                                                    <div style={{ color: showCover ? '' : 'darkGray' }}>
                                                         <PhotoAlbumIcon style={{ fontSize: '40px' }} />
                                                         <p className={styles['iconTextWidth']}>Show cover</p>
-                                                    </Grid>
-                                                </Grid>
-                                                <Grid className={showCover ? styles['drawerDiv'] : styles['drawerDivHide']} style={{ backgroundColor: `${states?.color}`, filter: showCoverImage ? 'brightness(125%)' : '' }} onClick={() => {
+                                                    </div>
+                                                </div>
+                                                <div className={showCover ? styles['drawerDiv'] : styles['drawerDivHide']} style={{ backgroundColor: `${states?.color}`, filter: showCoverImage ? 'brightness(125%)' : '' }} onClick={() => {
                                                     scrollTopC()
                                                     setShowCoverImage(!showCoverImage)
                                                 }}>
-                                                    <Grid style={{ color: showCoverImage ? '' : 'darkGray' }}>
+                                                    <div style={{ color: showCoverImage ? '' : 'darkGray' }}>
                                                         <ImageIcon style={{ fontSize: '40px' }} />
                                                         <p className={styles['iconTextWidth']}>Show cover image</p>
-                                                    </Grid>
-                                                </Grid>
-                                                <Grid className={showCover ? styles['drawerDiv'] : styles['drawerDivHide']} aria-controls="fade-menu" aria-haspopup="true" style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }} onClick={(e) => {
+                                                    </div>
+                                                </div>
+                                                <div className={showCover ? styles['drawerDiv'] : styles['drawerDivHide']} aria-controls="fade-menu" aria-haspopup="true" style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }} onClick={(e) => {
                                                     scrollTopC()
                                                     hndleClkShwAlignCovTitleMenu(e)
                                                 }}>
-                                                    <Grid>
+                                                    <div>
                                                         {centerAlignCoverTitle ?
                                                             <FormatAlignCenterIcon style={{ fontSize: '40px' }} />
                                                             : rightAlignCoverTitle ?
@@ -926,8 +926,8 @@ const DownloadPorfolioid: React.FC<Props> = () => {
                                                                 <FormatAlignLeftIcon style={{ fontSize: '40px' }} />
                                                         }
                                                         <p className={styles['iconText']}>Align cover title</p>
-                                                    </Grid>
-                                                </Grid>
+                                                    </div>
+                                                </div>
                                                 {/* <Grid className={showCover ? styles['drawerDiv'] : styles['drawerDivHide']} style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }} onClick={(e) => {
                                                     scrollTopC()
                                                     handleClickShowArtistName(e)
@@ -937,11 +937,11 @@ const DownloadPorfolioid: React.FC<Props> = () => {
                                                         <p className={styles['iconText']}>Show my name</p>
                                                     </Grid>
                                                 </Grid> */}
-                                                <Grid className={showCover ? styles['drawerDiv'] : styles['drawerDivHide']} aria-controls="fade-menu" aria-haspopup="true" style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }} onClick={(e) => {
+                                                <div className={showCover ? styles['drawerDiv'] : styles['drawerDivHide']} aria-controls="fade-menu" aria-haspopup="true" style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }} onClick={(e) => {
                                                     scrollTopC()
                                                     handleClickShowAlignOwnerName(e)
                                                 }}>
-                                                    <Grid>
+                                                    <div>
                                                         {centerAlignOwnerName ?
                                                             <FormatAlignCenterIcon style={{ fontSize: '40px' }} />
                                                             : rightAlignOwnerName ?
@@ -950,39 +950,39 @@ const DownloadPorfolioid: React.FC<Props> = () => {
                                                                 <FormatAlignLeftIcon style={{ fontSize: '40px' }} />
                                                         }
                                                         <p className={styles['iconText']}>Align my name</p>
-                                                    </Grid>
-                                                </Grid>
-                                            </Grid>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             :
-                                            <Grid className={styles['drawerDivParent']}>
+                                            <div className={styles['drawerDivParent']}>
                                                 <Link href="/userDetails" style={{ textDecoration: 'none' }}>
-                                                    <Grid className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }}>
-                                                        <Grid style={{ color: 'white' }}>
+                                                    <div className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }}>
+                                                        <div style={{ color: 'white' }}>
                                                             <RadioButtonUncheckedRoundedIcon style={{ fontSize: '60px' }} />
                                                             <p className={styles['iconTextWidth']}>Accent color</p>
-                                                        </Grid>
-                                                    </Grid>
+                                                        </div>
+                                                    </div>
                                                 </Link>
-                                                <Grid className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: showPortfolioName ? 'brightness(125%)' : '' }} onClick={() => {
+                                                <div className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: showPortfolioName ? 'brightness(125%)' : '' }} onClick={() => {
                                                     scrollTopG()
                                                     setShowPortfolioName(!showPortfolioName)
                                                 }}>
-                                                    <Grid style={{ color: showPortfolioName ? '' : 'darkGray' }}>
+                                                    <div style={{ color: showPortfolioName ? '' : 'darkGray' }}>
                                                         <FontDownloadIcon style={{ fontSize: '40px' }} />
                                                         <p className={styles['iconTextWidth']}>Show portfolio name</p>
-                                                    </Grid>
-                                                </Grid>
-                                                <Grid className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: showPortfolioDetails ? 'brightness(125%)' : '' }} onClick={() => {
+                                                    </div>
+                                                </div>
+                                                <div className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: showPortfolioDetails ? 'brightness(125%)' : '' }} onClick={() => {
                                                     scrollTopG()
                                                     setShowPortfolioDetails(!showPortfolioDetails)
                                                 }}>
-                                                    <Grid style={{ color: showPortfolioDetails ? '' : 'darkGray' }}>
+                                                    <div style={{ color: showPortfolioDetails ? '' : 'darkGray' }}>
                                                         <ShortTextIcon style={{ fontSize: '40px' }} />
                                                         <p className={styles['iconTextWidth']}>Show portfolio details</p>
-                                                    </Grid>
-                                                </Grid>
-                                                <Grid className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }} onClick={(e) => { handleClickShowNumberColums(e) }}>
-                                                    <Grid>{
+                                                    </div>
+                                                </div>
+                                                <div className={styles['drawerDiv']} style={{ backgroundColor: `${states?.color}`, filter: 'brightness(125%)' }} onClick={(e) => { handleClickShowNumberColums(e) }}>
+                                                    <div>{
                                                     }
                                                         {
                                                             oneOriginalSize ?
@@ -992,20 +992,20 @@ const DownloadPorfolioid: React.FC<Props> = () => {
                                                                     <Looks3Icon style={{ fontSize: '40px' }} />
                                                         }
                                                         <p className={styles['iconTextWidth']}>Number of columns</p>
-                                                    </Grid>
-                                                </Grid>
+                                                    </div>
+                                                </div>
 
-                                            </Grid>
+                                            </div>
 
                                     }
-                                </Grid>
+                                </div>
 
-                            </Grid>
+                            </div>
                         }
-                    </Grid>
-                </Grid >
+                    </div>
+                </div>
             )}
-        </Grid>
+        </div>
     )
 
 }

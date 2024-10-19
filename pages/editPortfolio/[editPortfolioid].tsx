@@ -246,8 +246,7 @@ const EditPortfolioid: React.FC<Props> = () => {
     }
 
     return (
-        <Grid>
-
+        <div>
             {
                 anotherEditportfolioDetails && anotherEditportfolioDetails?.pictures?.length > 0 && skeleton == false ?
                     <Formik
@@ -368,12 +367,12 @@ const EditPortfolioid: React.FC<Props> = () => {
 
                             }) => {
                                 return (
-                                    <Grid>
+                                    <div>
                                         <KeyboardSpaceBackIcon simplified={false} windowPathName={window.location.pathname} />
-                                        <Grid className={styles['container']}>
+                                        <div className={styles['container']}>
                                             <form onSubmit={(e) => { e.preventDefault() }} className={styles['form']}
                                             >
-                                                <Grid className="portfolioTitle">
+                                                <div className="portfolioTitle">
                                                     <label htmlFor='portfolioName'></label>
                                                     <TextField
                                                         variant='standard'
@@ -399,8 +398,8 @@ const EditPortfolioid: React.FC<Props> = () => {
                                                     />
                                                     <ErrorMessage component='div' className={styles['error']} name="portfolioName" />
 
-                                                </Grid>
-                                                <Grid className={styles['description']}>
+                                                </div>
+                                                <div className={styles['description']}>
                                                     <label htmlFor='description'>DESCRIPTION</label>
                                                     <TextareaAutosize
                                                         onChange={handleChange}
@@ -410,18 +409,18 @@ const EditPortfolioid: React.FC<Props> = () => {
                                                         maxLength={300}
                                                     />
                                                     <ErrorMessage component='div' className={styles['error']} name="description" />
-                                                </Grid>
-                                                <Grid className={styles['yearContainer']}>
-                                                    <Grid className={styles['year']}>
+                                                </div>
+                                                <div className={styles['yearContainer']}>
+                                                    <div className={styles['year']}>
                                                         <label id={styles['year']}>YEAR</label>
-                                                        <Grid className={styles['checkboxContainer']}>
+                                                        <div className={styles['checkboxContainer']}>
                                                             <input type="checkbox" id="check" style={{ accentColor: states.userInfo?.color }} checked={isYearChecked}
                                                                 onClick={handleCheckboxChange} ref={noneRef} />
                                                             <label htmlFor='check' id={styles['none']}>None</label>
-                                                        </Grid>
-                                                    </Grid>
+                                                        </div>
+                                                    </div>
                                                     {/* { */}
-                                                    <Grid className={styles['yearInput']}>
+                                                    <div className={styles['yearInput']}>
                                                         {
                                                             sliderYears.length > 0 && (
                                                                 <Splide
@@ -462,10 +461,10 @@ const EditPortfolioid: React.FC<Props> = () => {
                                                             )
                                                         }
 
-                                                    </Grid>
+                                                    </div>
                                                     {/* } */}
-                                                </Grid>
-                                                <Grid className={styles['privacy']}>
+                                                </div>
+                                                <div className={styles['privacy']}>
                                                     <label>Privacy</label>
                                                     <RadioGroup value={states.privacy}
                                                         className={styles['privacyOptions']}
@@ -477,10 +476,10 @@ const EditPortfolioid: React.FC<Props> = () => {
                                                         <FormControlLabel value='private' control={<Radio style={{ color: `${states?.userInfo?.color}` }} />} label="Private" />
                                                     </RadioGroup>
 
-                                                </Grid>
-                                                <Grid className={styles['coverImageContainer']}>
+                                                </div>
+                                                <div className={styles['coverImageContainer']}>
                                                     <label>COVER IMAGE</label>
-                                                    <Grid className={styles['coverImagesInput']}>
+                                                    <div className={styles['coverImagesInput']}>
                                                         {
                                                             states.coverImagesArray.length > 0 &&
                                                             <Splide
@@ -513,9 +512,9 @@ const EditPortfolioid: React.FC<Props> = () => {
                                                                 }
                                                             </Splide>
                                                         }
-                                                    </Grid>
-                                                </Grid>
-                                                <Grid className={styles['picturesContainer']}>
+                                                    </div>
+                                                </div>
+                                                <div className={styles['picturesContainer']}>
                                                     <>
                                                         <label>Pictures</label>
                                                         <p style={{ display: "inline-block", marginLeft: '10px' }}>(32MB limit)</p>
@@ -556,8 +555,8 @@ const EditPortfolioid: React.FC<Props> = () => {
                                                         />
 
                                                     </>
-                                                </Grid>
-                                                <Grid
+                                                </div>
+                                                <div
                                                 // className={styles.favIcon}
                                                 >
                                                     <>
@@ -574,18 +573,18 @@ const EditPortfolioid: React.FC<Props> = () => {
                                                             <DoneIcon />
                                                         </Fab>
                                                     </>
-                                                </Grid>
+                                                </div>
 
                                             </form>
-                                        </Grid>
-                                    </Grid>
+                                        </div>
+                                    </div>
                                 )
                             }
                         }
                     </Formik >
                     :
-                    <Grid>
-                        <Grid>
+                    <div>
+                        <div>
 
                             <Skeleton variant="rectangular" style={{ marginTop: '5px', width: '20%', height: '40px' }} />
                             <Skeleton variant="rectangular" style={{ marginTop: '25px', width: '50%', height: '40px' }} />
@@ -593,11 +592,11 @@ const EditPortfolioid: React.FC<Props> = () => {
                             <Skeleton variant="rectangular" style={{ marginTop: '25px', width: '100%', height: '80px' }} />
                             <Skeleton variant="rectangular" style={{ marginTop: '25px', width: '100%', height: '60px' }} />
                             <Skeleton variant="rectangular" style={{ marginTop: '25px', width: '100%', height: '250px' }} />
-                        </Grid>
-                    </Grid>
+                        </div>
+                    </div>
 
             }
-        </Grid >
+        </div >
     )
 
 }
